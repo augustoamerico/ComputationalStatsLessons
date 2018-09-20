@@ -1,0 +1,20 @@
+--- 
+title: "Computational Stats"
+author: "Tiago dos Santos"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+link-citations: yes
+description: "The captain's log of Computational Stats"
+biblatex: yes
+---
+```{r include = FALSE}
+library(pander)
+fig_basePath = "Figures/"
+```
+
+```{r child="Content/onGoingLessons.Rmd"}
+```
+
+
+<!--chapter:end:index.Rmd-->
+
