@@ -8,6 +8,8 @@ description: "The captain's log of Computational Stats"
 biblatex: yes
 ---
 ```{r include = FALSE}
+options(tz="Europe/Lisbon")
+library(reticulate)
 library(pander)
 fig_basePath = "Figures/"
 ```
@@ -15,6 +17,9 @@ fig_basePath = "Figures/"
 ```{r child="Content/onGoingLessons.Rmd"}
 ```
 
+```{python}
+1+1
+```
 
 <!--chapter:end:index.Rmd-->
 

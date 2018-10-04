@@ -25,7 +25,7 @@
 <meta name="author" content="Tiago dos Santos">
 
 
-<meta name="date" content="2018-09-20">
+<meta name="date" content="2018-10-04">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 
-
+<link rel="next" href="lessons-2.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -100,15 +100,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="#lesson-1"><i class="fa fa-check"></i><b>1</b> Lesson 1</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="#start-by-creating-a-vector"><i class="fa fa-check"></i><b>1.1</b> Start by creating a vector</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="#now-a-matrix"><i class="fa fa-check"></i><b>1.2</b> Now a Matrix!</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="#dataframes"><i class="fa fa-check"></i><b>1.3</b> DataFrames</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="#reading-a-tab-separated-file"><i class="fa fa-check"></i><b>1.4</b> Reading a Tab Separated File</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="#generating-data"><i class="fa fa-check"></i><b>1.5</b> Generating data</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="#getting-insights"><i class="fa fa-check"></i><b>1.6</b> Getting insights</a></li>
-<li class="chapter" data-level="1.7" data-path="index.html"><a href="#lists"><i class="fa fa-check"></i><b>1.7</b> Lists</a></li>
-<li class="chapter" data-level="1.8" data-path="index.html"><a href="#functions"><i class="fa fa-check"></i><b>1.8</b> Functions</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Lesson 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#start-by-creating-a-vector"><i class="fa fa-check"></i><b>1.1</b> Start by creating a vector</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#now-a-matrix"><i class="fa fa-check"></i><b>1.2</b> Now a Matrix!</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#dataframes"><i class="fa fa-check"></i><b>1.3</b> DataFrames</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#reading-a-tab-separated-file"><i class="fa fa-check"></i><b>1.4</b> Reading a Tab Separated File</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#generating-data"><i class="fa fa-check"></i><b>1.5</b> Generating data</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#getting-insights"><i class="fa fa-check"></i><b>1.6</b> Getting insights</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#lists"><i class="fa fa-check"></i><b>1.7</b> Lists</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#functions"><i class="fa fa-check"></i><b>1.8</b> Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lessons-2.html"><a href="lessons-2.html"><i class="fa fa-check"></i><b>2</b> Lessons 2</a><ul>
+<li class="chapter" data-level="2.1" data-path="lessons-2.html"><a href="lessons-2.html#random-variables-and-vectors"><i class="fa fa-check"></i><b>2.1</b> Random Variables and Vectors</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="lessons-2.html"><a href="lessons-2.html#elements-of-probability"><i class="fa fa-check"></i><b>2.1.1</b> Elements of probability</a></li>
+<li class="chapter" data-level="2.1.2" data-path="lessons-2.html"><a href="lessons-2.html#expected-value"><i class="fa fa-check"></i><b>2.1.2</b> Expected value</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -130,7 +136,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="header">
 <h1 class="title">Computational Stats</h1>
 <h4 class="author"><em>Tiago dos Santos</em></h4>
-<h4 class="date"><em>2018-09-20</em></h4>
+<h4 class="date"><em>2018-10-04</em></h4>
 </div>
 <div id="lesson-1" class="section level1">
 <h1><span class="header-section-number">1</span> Lesson 1</h1>
@@ -450,30 +456,30 @@ emp<span class="op">$</span>ant &lt;-<span class="st"> </span><span class="kw">r
 ##  2  3  4  5  6  7  8  9 10 11 14 15 16 18 
 ##  7  8  3  2  6  2  1  4  1  2  1  1  1  1</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>(emp<span class="op">$</span>n.emp) <span class="co"># each company is a bin in x label, y is the number of employees</span></code></pre></div>
-<p><img src="Computational_Stats_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="Multivariate_Stats_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>(<span class="kw">table</span>(emp<span class="op">$</span>n.emp), <span class="dt">xlab=</span><span class="st">&quot;#Employees&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Frequecy&quot;</span>, <span class="dt">col=</span><span class="st">&quot;pink&quot;</span>)</code></pre></div>
-<p><img src="Computational_Stats_files/figure-html/unnamed-chunk-21-2.png" width="672" /></p>
+<p><img src="Multivariate_Stats_files/figure-html/unnamed-chunk-22-2.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(emp<span class="op">$</span>vmm,<span class="dt">range=</span><span class="dv">0</span>,<span class="dt">col=</span><span class="st">&quot;purple&quot;</span>,<span class="dt">horizontal=</span>T,<span class="dt">main=</span><span class="st">&quot;vmm&quot;</span>)</code></pre></div>
-<p><img src="Computational_Stats_files/figure-html/unnamed-chunk-21-3.png" width="672" /></p>
+<p><img src="Multivariate_Stats_files/figure-html/unnamed-chunk-22-3.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(emp<span class="op">$</span>vmm <span class="op">~</span><span class="st"> </span>emp<span class="op">$</span>n.emp,<span class="dt">range=</span><span class="dv">0</span>,<span class="dt">col=</span><span class="st">&quot;purple&quot;</span>,<span class="dt">horizontal=</span>T,<span class="dt">main=</span><span class="st">&quot;vmm&quot;</span>)</code></pre></div>
-<p><img src="Computational_Stats_files/figure-html/unnamed-chunk-21-4.png" width="672" /></p>
+<p><img src="Multivariate_Stats_files/figure-html/unnamed-chunk-22-4.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(emp<span class="op">$</span>vmm)</code></pre></div>
-<p><img src="Computational_Stats_files/figure-html/unnamed-chunk-21-5.png" width="672" /></p>
+<p><img src="Multivariate_Stats_files/figure-html/unnamed-chunk-22-5.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(emp<span class="op">$</span>vmm, <span class="dt">freq=</span>F)
 <span class="kw">lines</span>(<span class="kw">density</span>(emp<span class="op">$</span>vmm),<span class="dt">col=</span><span class="dv">2</span>)</code></pre></div>
-<p><img src="Computational_Stats_files/figure-html/unnamed-chunk-21-6.png" width="672" /></p>
+<p><img src="Multivariate_Stats_files/figure-html/unnamed-chunk-22-6.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))
 <span class="kw">hist</span>(emp<span class="op">$</span>vmm)
 
 <span class="kw">hist</span>(emp<span class="op">$</span>vmm, <span class="dt">freq=</span>F)
 <span class="kw">lines</span>(<span class="kw">density</span>(emp<span class="op">$</span>vmm),<span class="dt">col=</span><span class="dv">2</span>)</code></pre></div>
-<p><img src="Computational_Stats_files/figure-html/unnamed-chunk-21-7.png" width="672" /></p>
+<p><img src="Multivariate_Stats_files/figure-html/unnamed-chunk-22-7.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))
 
 <span class="kw">plot</span>(emp<span class="op">$</span>vmm,emp<span class="op">$</span>n.socios,<span class="dt">pch=</span><span class="dv">16</span>)</code></pre></div>
-<p><img src="Computational_Stats_files/figure-html/unnamed-chunk-21-8.png" width="672" /></p>
+<p><img src="Multivariate_Stats_files/figure-html/unnamed-chunk-22-8.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(emp)</code></pre></div>
-<p><img src="Computational_Stats_files/figure-html/unnamed-chunk-21-9.png" width="672" /></p>
+<p><img src="Multivariate_Stats_files/figure-html/unnamed-chunk-22-9.png" width="672" /></p>
 </div>
 <div id="lists" class="section level2">
 <h2><span class="header-section-number">1.7</span> Lists</h2>
@@ -521,8 +527,6 @@ uma.lista[<span class="st">&quot;um.vector&quot;</span>]</code></pre></div>
 ## $desconto
 ## [1] 250</code></pre>
 <p>This is how you function</p>
-
-
 </div>
 </div>
             </section>
@@ -531,7 +535,7 @@ uma.lista[<span class="st">&quot;um.vector&quot;</span>]</code></pre></div>
         </div>
       </div>
 
-
+<a href="lessons-2.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

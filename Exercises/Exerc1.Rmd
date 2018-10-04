@@ -1,0 +1,71 @@
+---
+title: "Computational Stats"
+site: bookdown::bookdown_site
+---
+
+```{r include = FALSE}
+datasetsDir=file.path(PROJHOME,"datasets")
+```
+
+
+## Exercises 2
+
+
+```{r}
+support <- c(1,2,3,4,5)
+probs <- c(0.2,0.3,0.1,0.3,0.1)
+
+cumsumProbs <- cumsum(probs)
+
+
+simulations <- sapply(runif(1000),function(randVal){
+  for(i in 1:length(cumsumProbs)){
+    if(randVal < cumsumProbs[i]){
+      return(support[i])
+    }
+  }
+})
+
+hist(simulations,breaks=0:5)
+
+```
+
+#### Generate a poisson
+```{r}
+
+lambda = 2
+
+dictProbs = list()
+dictProbs[0] = exp(1)^(-lambda)
+
+
+## to complete
+
+simulations <- sapply(runif(1000),function(randVal){
+  for(i in 1:length(cumsumProbs)){
+    if(randVal < cumsumProbs[i]){
+      return(support[i])
+    }
+  }
+})
+
+hist(simulations,breaks=0:5)
+
+```
+
+#### Generate a exponencial with lambda = 2
+```{r}
+
+lambda = 2
+
+dictProbs = list()
+dictProbs[0] = exp(1)^(-lambda)
+
+expMinus1 <- function(y){
+  return(-(1/lambda)*log(1-y))
+}
+
+
+
+
+```

@@ -247,3 +247,16 @@ desconto(1000,25)
 ```
 
 This is how you function
+
+# Lessons 2
+
+## Random Variables and Vectors
+
+### Elements of probability
+
+A random variable $\bold{X}$ is a function that takes an event space and return a value:
+
+$$ X: \Omega \rightarrow {\rm I\!R}$$
+
+
+### Expected value

@@ -1,0 +1,895 @@
+18/09/22 00:00:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:00:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:00:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:00:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:00:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:00:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:00:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:00:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:00:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:00:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:00:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:00:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:00:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:00:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:00:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:00:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:00:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:00:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:00:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:01:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:01:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:01:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:01:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:01:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:01:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:01:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:01:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:01:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:01:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:01:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:01:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:01:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:01:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:01:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:01:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:01:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:01:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:01:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:02:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:02:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:02:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:02:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:02:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:02:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:02:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:02:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:02:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:02:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:02:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:02:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:02:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:02:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:02:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:02:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:02:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:02:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:02:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:03:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:03:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:03:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:03:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:03:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:03:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:03:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:03:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:03:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:03:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:03:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:03:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:03:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:03:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:03:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:03:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:03:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:03:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:03:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:04:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:04:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:04:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:04:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:04:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:04:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:04:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:04:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:04:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:04:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:04:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:04:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:04:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:04:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:04:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:04:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:04:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:04:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:04:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:05:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:05:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:05:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:05:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:05:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:05:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:05:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:05:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:05:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:05:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:05:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:05:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:05:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:05:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:05:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:05:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:05:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:05:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:05:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:06:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:06:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:06:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:06:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:06:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:06:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:06:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:06:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:06:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:06:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:06:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:06:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:06:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:06:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:06:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:06:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:06:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:06:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:06:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:07:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:07:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:07:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:07:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:07:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:07:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:07:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:07:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:07:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:07:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:07:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:07:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:07:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:07:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:07:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:07:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:07:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:07:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:07:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:08:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:08:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:08:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:08:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:08:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:08:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:08:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:08:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:08:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:08:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:08:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:08:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:08:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:08:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:08:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:08:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:08:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:08:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:08:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:09:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:09:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:09:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:09:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:09:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:09:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:09:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:09:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:09:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:09:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:09:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:09:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:09:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:09:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:09:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:09:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:09:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:09:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:09:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:10:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:10:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:10:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:10:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:10:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:10:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:10:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:10:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:10:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:10:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:10:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:10:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:10:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:10:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:10:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:10:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:10:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:10:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:10:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:11:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:11:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:11:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:11:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:11:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:11:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:11:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:11:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:11:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:11:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:11:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:11:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:11:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:11:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:11:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:11:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:11:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:11:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:11:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:12:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:12:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:12:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:12:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:12:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:12:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:12:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:12:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:12:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:12:31 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:12:31 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:12:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:31 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:12:41 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:12:41 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:12:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:41 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:12:51 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:12:51 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:12:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:12:51 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:13:01 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:13:01 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:13:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:13:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:13:01 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:13:11 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:13:11 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:13:11 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:13:11 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:13:11 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 00:13:21 INFO Executor: Told to re-register on heartbeat
+18/09/22 00:13:21 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 00:13:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:13:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 00:13:21 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 01:30:07 INFO Executor: Told to re-register on heartbeat
+18/09/22 01:30:07 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 01:30:07 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 01:30:07 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 01:30:07 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:15:04 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:15:04 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:15:04 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:04 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:04 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:15:04 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:15:04 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:15:04 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:04 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:04 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:15:04 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:15:04 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:15:04 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:04 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:04 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:15:15 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:15:15 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:15:15 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:15 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:15 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:15:26 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:15:26 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:15:26 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:26 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:26 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:15:36 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:15:36 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:15:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:36 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:15:46 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:15:46 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:15:46 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:46 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:46 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:15:56 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:15:56 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:15:56 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:56 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:15:56 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:16:06 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:16:06 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:16:06 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:16:06 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:16:06 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:16:16 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:16:16 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:16:16 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:16:16 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:16:16 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:16:26 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:16:26 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:16:26 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:16:26 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:16:26 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:16:36 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:16:36 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:16:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:16:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:16:36 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 09:16:46 INFO Executor: Told to re-register on heartbeat
+18/09/22 09:16:46 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 09:16:46 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:16:46 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 09:16:46 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 12:16:55 INFO Executor: Told to re-register on heartbeat
+18/09/22 12:16:55 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 12:16:55 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 12:16:55 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 12:16:55 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:14:22 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:14:22 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:14:23 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:23 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:23 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:14:23 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:14:23 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:14:23 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:23 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:23 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:14:28 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:14:28 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:14:28 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:28 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:28 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:14:38 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:14:38 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:14:38 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:38 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:38 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:14:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:14:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:14:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:14:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:14:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:14:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:14:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:15:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:15:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:15:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:15:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:15:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:15:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:15:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:15:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:15:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:15:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:15:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:15:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:15:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:15:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:15:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:15:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:15:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:15:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:15:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:16:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:16:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:16:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:16:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:16:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:16:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:16:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:16:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:16:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:16:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:16:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:16:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:16:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:16:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:16:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:16:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:16:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:16:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:16:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:17:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:17:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:17:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:17:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:17:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:17:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:17:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:17:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:17:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:17:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:17:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:17:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:17:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:17:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:17:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:17:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:17:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:17:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:17:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:18:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:18:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:18:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:18:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:18:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:18:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:18:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:18:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:18:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:18:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:18:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:18:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:18:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:18:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:18:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:18:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:18:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:18:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:18:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:19:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:19:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:19:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:19:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:19:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:19:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:19:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:19:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:19:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:19:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:19:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:19:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:19:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:19:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:19:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:19:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:19:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:19:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:19:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:20:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:20:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:20:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:20:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:20:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:20:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:20:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:20:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:20:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:20:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:20:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:20:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:20:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:20:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:20:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:20:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:20:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:20:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:20:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:21:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:21:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:21:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:21:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:21:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:21:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:21:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:21:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:21:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:21:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:21:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:21:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:21:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:21:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:21:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:21:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:21:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:21:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:21:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:22:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:22:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:22:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:22:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:22:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:22:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:22:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:22:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:22:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:22:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:22:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:22:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:22:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:22:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:22:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:22:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:22:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:22:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:22:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:23:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:23:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:23:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:23:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:23:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:23:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:23:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:23:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:23:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:23:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:23:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:23:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:23:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:23:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:23:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:23:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:23:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:23:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:23:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:24:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:24:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:24:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:24:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:24:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:24:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:24:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:24:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:24:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:24:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:24:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:24:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:24:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:24:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:24:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:24:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:24:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:24:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:24:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:25:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:25:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:25:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:25:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:25:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:25:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:25:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:25:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:25:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:25:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:25:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:25:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:25:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:25:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:25:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:25:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:25:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:25:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:25:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:26:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:26:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:26:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:26:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:26:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:26:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:26:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:26:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:26:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:26:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:26:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:26:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:26:49 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:26:49 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:26:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:49 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:26:59 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:26:59 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:26:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:26:59 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:27:09 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:27:09 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:27:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:27:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:27:09 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:27:19 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:27:19 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:27:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:27:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:27:19 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:27:29 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:27:29 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:27:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:27:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:27:29 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 13:27:39 INFO Executor: Told to re-register on heartbeat
+18/09/22 13:27:39 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 13:27:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:27:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 13:27:39 INFO BlockManager: Reporting 0 blocks to the master.
+18/09/22 16:27:48 INFO Executor: Told to re-register on heartbeat
+18/09/22 16:27:48 INFO BlockManager: BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None) re-registering with master
+18/09/22 16:27:48 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 16:27:48 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 127.0.0.1, 51653, None)
+18/09/22 16:27:48 INFO BlockManager: Reporting 0 blocks to the master.
