@@ -1,0 +1,132 @@
+---
+title: "Computational Stats"
+site: bookdown::bookdown_site
+---
+
+# Lesson 3
+
+```{r include = F}
+library(dplyr)
+```
+
+```{r}
+
+g <- function(x){
+  exp(x^2)
+}
+
+#create sample from uniform distribution
+sample <- runif(10000)
+sample.length <- length(sample)
+
+mean(sapply(sample,g))
+mean(g(sample))
+
+
+
+```
+
+
+### Estimating pi
+```{r}
+
+
+g <- function(x){
+  sqrt(1-x^2)
+}
+
+#create sample from uniform distribution
+sample <- runif(100000000)
+
+mean(g(sample))*4
+
+
+gIndicatriz <- function(x,y){
+  ifelse((x^2 + y^2) <= 1, 1, 0)
+}
+
+sampleX <- runif(1000000)
+sampleY <- runif(1000000)
+mean(gIndicatriz(sampleX,sampleY))*4
+
+
+```
+
+
+### Estimating test stats
+
+The hypothesis being tested is the following:
+
+```{r}
+popSample <- c(0.2,1.2,2.9,1.2,0.1,0.1,0.4,0.1,0.7,0.1,0.9,0.3,0.6,0.1,0.2,0.1,0.4,0.1,0.3,1.4)
+
+lambdaEstimator <- function(sample){
+  1/mean(sample)
+}
+
+
+parameter <- 3
+
+testStatsEstimator <- function(sample,hypothesisLambda, estimatedLambda){
+  sampleMean <- mean(sample)
+  sampleLength <- length(sample)
+  return(
+    (
+      1/((sampleMean*hypothesisLambda)^sampleLength))
+        *
+      (exp(
+        sampleLength*
+        (
+          hypothesisLambda*sampleMean -1)
+        )
+     )
+  )
+}
+
+tobs <- testStatsEstimator(popSample,parameter,lambdaEstimator(popSample))
+```
+
+Here, we will do the following 1000 times:
+
+- we get a random sample from an exponential with $\lambda$ = 3
+- we obtain the estimated test statistic for this sample
+ 
+By the end of this process, we will get 1000 values that represente possible values of the Test Statistic Function
+
+
+```{r warning=F}
+empiricDistTestStats <- sapply(1:1000,function(idx){
+  sampleTest <- rexp(length(popSample),parameter)
+  testStatsEstimator(sampleTest,parameter,lambdaEstimator(sampleTest))
+}) 
+
+empiricDistTestStats <- c(empiricDistTestStats,tobs)
+empiricDistTestStats.df <- as.data.frame(empiricDistTestStats)
+names(empiricDistTestStats.df) <- c("values")
+
+empiricFrequency <- empiricDistTestStats.df %>% dplyr::group_by(values) %>% dplyr::summarise(n=n())
+
+p_value_estimated <- sum(empiricFrequency[empiricFrequency$values >= tobs,]$n)/sum(empiricFrequency$n)
+
+
+a <- list(
+  text = paste0("P value estimated: " , round(p_value_estimated,5)),
+  x = tobs,
+  y = 0.3,
+  xref = "x",
+  yref = "y",
+  ax = 50
+)
+
+plotly::plot_ly(
+  x = empiricDistTestStats
+  , type="histogram"
+  , histnorm = "probability"
+  , name = "Empiric Frequency") %>% 
+plotly::add_segments(
+  x = tobs, xend = tobs, y = 0, yend = 0.3, name = "T obs"
+) %>% plotly::layout(annotations=a)
+
+```
+
+

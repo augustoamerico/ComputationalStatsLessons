@@ -17,6 +17,9 @@ fig_basePath = "Figures/"
 ```{r child="Content/onGoingLessons.Rmd"}
 ```
 
+```{r child="Content/lesson3.Rmd"}
+```
+
 ```{python}
 1+1
 ```
