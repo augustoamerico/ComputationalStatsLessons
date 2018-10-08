@@ -52,10 +52,61 @@ mean(gIndicatriz(sampleX,sampleY))*4
 
 ```
 
+## Hypothesis Testing
+
+A statistical hypothesis is some conjecture about the distribution of one or more random variables. 
+For each hypothesis designated by null hypothesis and denoted by $H0$, there is always an alternative hypothesis denoted by $H1$.
+We start the test by believing that $H0$ is true, and during the test we can discard that hypothesis only if the data points there.
+
+Moreover, we can see these hypothesis testing as:
+
+- A statistical hypothesis is some statement about the parameters of one or more populations (parametric tests) or about the distribution of the population (non-parametric tests).
+- The goal of a test is to use the information of a data sample to decide (reject or no reject) about a conjecture over unknown aspects of a given population.
+
+### Types of error while infering through hypothesis testing
+
+There are always some risk associated to statistical inference:
+
+- *** Type 1 error ***: reject $H0$ when $H0$ is true (rejecting error, aka False Negative in ML nomenclature)
+- *** Type 2 error ***: accept $H0$ when $H0$ is false (no rejecting error, aka False Positive in ML nomenclature)
+
+### Defining $\alpha$ to reduce a type of error
+
+$$
+\alpha = P(Type1Err) = P(Rejecting H0 | H0 is true)
+$$ 
+
+So, we define $\alpha$ as being the probability that we want for the Type 1 error - or how much are we willing to be prone to this type of error.
+
+Therefone, $\alpha$ is called *** significance level *** of the test (a test that is very prone to errors is not very significant, right?)
+
+![](https://media.giphy.com/media/NxEsKrLJXPuwg/giphy.gif)
+
+In general, we assign a very small value to the probability of type I error (0.05 ou 0.01).
+
+On the other end of the error spectrum, we define $\beta$ as
+
+$$
+\beta = P(Type2Err) = P(Accepting H0 | H0 is false)
+$$ 
+
+where $1 − \beta$ is called power of the test. The insight here is that the lower the $\beta$, the more "power" this test have.
+
+### Procedure to make a test using $p-value$
+
+#### Wait, what is p-value? 
+
+![](https://media.giphy.com/media/cFgb5p5e1My3K/giphy.gif)
+
+(WIP)
 
 ### Estimating test stats
 
 The hypothesis being tested is the following:
+
+We have a sample (the variable `popSample` below) of independent observations from a random variable that we know follows an exponencial distribution, with unknown parameter $\lambda$.
+
+We want to test if $\lambda = 3$.
 
 ```{r}
 popSample <- c(0.2,1.2,2.9,1.2,0.1,0.1,0.4,0.1,0.7,0.1,0.9,0.3,0.6,0.1,0.2,0.1,0.4,0.1,0.3,1.4)
