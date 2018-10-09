@@ -30,26 +30,32 @@ hist(simulations,breaks=0:5)
 
 ```
 
-#### Generate a poisson
+#### Generates a random variable with a Poisson distribution
 ```{r}
 
-lambda = 2
-
-dictProbs = list()
-dictProbs[0] = exp(1)^(-lambda)
-
-
-## to complete
-
-simulations <- sapply(runif(1000),function(randVal){
-  for(i in 1:length(cumsumProbs)){
-    if(randVal < cumsumProbs[i]){
-      return(support[i])
+PoiRandNumGen<-function(lambda)
+{
+  ended <- 0
+  u <- runif(1)
+  i <- 0
+  p <- exp(-lambda)
+  f <- p
+  while (!ended) 
+  {
+    if(u<f)
+    {
+      x <- i
+      ended <- 1
     }
+    else
+    {
+      p=(lambda/(i+1))*p
+      f=f+p
+      i=i+1
+    }  
   }
-})
-
-hist(simulations,breaks=0:5)
+  return(x)
+}
 
 ```
 
@@ -65,7 +71,70 @@ expMinus1 <- function(y){
   return(-(1/lambda)*log(1-y))
 }
 
+```
+
+#### Generates a random variable with a Binomial distribution
+```{r}
+
+BinRandNumGen<-function(n,p)
+{
+  ended <- 0
+  u <- runif(1)
+  c <- p/(1-p)
+  i <- 0
+  pr <- (1-p)^n
+  f <- pr
+  while (!ended) 
+  {
+    if(u<f)
+    {
+      x <- i
+      ended <- 1
+    }
+    else
+    {
+      pr <- (c*((n-i)/(i+1)))*pr
+      f <- f+pr
+      i <- i+1
+    }
+  }
+  return(x)
+}
 
 
+```
+#### Generates a random variable with a uniform distribution
+```{r}
+
+UniRandNumGen<-function(x,p)
+{
+  u<-runif(1)
+  accP<-p[1]
+  for(i in 1:length(x))
+  {
+    if(u<accP)
+    {
+      xfinal=x[i-1]
+      break
+    }
+    else
+    {
+      accP=accP+p[i+1]
+    }
+    xfinal=x[i]
+  }
+  return(xfinal)
+}
+
+```
+#### Numerical aproximation of the number pi (using the Monte Carlo method)
+```{r}
+
+n<-600000
+gen<-c(NA,nrow=n)
+u<-runif(n)
+g<-function(x){sqrt(1-x^2)}
+va<-4*g(u)
+mean(va)
 
 ```
