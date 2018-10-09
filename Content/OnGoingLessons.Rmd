@@ -267,6 +267,13 @@ $$ X: \Omega \rightarrow {\rm I\!R}$$
 
 ### Additional/Supporting Concepts
 
+#### Empirical Distribution Function
+In statistics, an empirical distribution function is the distribution function associated with the empirical measure of a sample. This cumulative distribution function is a step function that jumps up by 1/n at each of the n data points.
+
+Let (x1, …, xn) be independent, identically distributed real random variables with the common cumulative distribution function F(t). Then the empirical distribution function is defined as:
+
+F ^ n ( t ) = number of elements in the sample ≤ t n = 1 n ∑ i = 1 n 1 x i ≤ t , {\displaystyle {\widehat {F}}_{n}(t)={\frac {{\mbox{number of elements in the sample}}\leq t}{n}}
+
 #### Cardinality (# operator) /appears in slide 50
 In mathematics and more specifically in set theory, the cardinality of a set refers to the number of elements in it.
 
