@@ -260,3 +260,72 @@ $$ X: \Omega \rightarrow {\rm I\!R}$$
 
 
 ### Expected value
+
+# Lessons 3
+
+## Monte Carlo Method
+
+### Additional/Supporting Concepts
+
+#### Empirical Distribution Function
+In statistics, an empirical distribution function is the distribution function associated with the empirical measure of a sample. This cumulative distribution function is a step function that jumps up by 1/n at each of the n data points.
+
+Let (x1, …, xn) be independent, identically distributed real random variables with the common cumulative distribution function F(t). Then the empirical distribution function is defined as:
+
+F ^ n ( t ) = number of elements in the sample ≤ t n = 1 n ∑ i = 1 n 1 x i ≤ t , {\displaystyle {\widehat {F}}_{n}(t)={\frac {{\mbox{number of elements in the sample}}\leq t}{n}}
+
+#### Cardinality (# operator) /appears in slide 50
+In mathematics and more specifically in set theory, the cardinality of a set refers to the number of elements in it.
+
+#### Likelihood Function
+
+Let X {\displaystyle X} X be a discrete random variable with probability mass function p {\displaystyle p} p depending on a parameter θ {\displaystyle \theta } \theta . Then the function
+
+L ( θ ∣ x ) = p θ ( x ) = P θ ( X = x ) {\displaystyle {\mathcal {L}}(\theta \mid x)=p_{\theta }(x)=P_{\theta }(X=x)} {\displaystyle {\mathcal {L}}(\theta \mid x)=p_{\theta }(x)=P_{\theta }(X=x)},
+
+considered as a function of θ {\displaystyle \theta } \theta , is the likelihood function (of θ {\displaystyle \theta } \theta ), given the outcome x {\displaystyle x} x of the random variable X {\displaystyle X} X.
+
+#### Likelihood Ratio Test /appears in slide 52
+A likelihood ratio test (LR test) is a statistical test used for comparing the goodness of fit of two statistical models — a null model against an alternative model. The test is based on the likelihood ratio, which expresses how many times more likely the data are under one model than the other. This likelihood ratio, or equivalently its logarithm, can then be used to compute a p-value, or compared to a critical value to decide whether or not to reject the null model. 
+
+#### Law of Large Numbers:
+Let x1,...,xn be a independent and identicaly distributed sequence of random variables
+
+$\displaystyle \lim_{x \to \infty} \frac{\sum_{x = 1}^{n} g(xi)}{n}$=E(g(x))
+
+### Monte Carlo Method in parameter estimation
+
+$\theta=\left(\int_{}^{D} h(x) \; dx\right)$
+$\theta=\left(\int_{}^{D} g(x)f(x) \; dx\right) , \left(\int_{}^{D} f(x) \; dx\right)=1$ ->because f(x) is the density function
+$\theta=E(g(x))
+
+By the law of large numbers:
+
+$\theta=\frac{\sum_{x = 1}^{n} g(xi)}{n}$
+
+$\theta$: Estimated parameter
+D: Support
+h(x): Function capable of being decomposed in a product of two functions (one of them being the density function of random variable with support D
+
+### Hypothesis testing using p-value and Monte Carlo
+
+  1. Identify the paramenter of interest and fix H0(null hypothesis) and H1(alternative hypothesis)
+
+  2. Choose the test statistic T and compute the values of the statistic with the available sample, tobs=T(x1,..,xn)
+
+  3. Compute the p-value for the computed value of the statistic:
+     - Bilateral test:p-value={  2P(T<tobs|H0) if tobs is small
+    				2P(T>tobs|H0) if tobs is high
+     - Right unilateral test:p-value=P(T>tobs|H0)  
+     - Left unilateral test:p-value=P(T<tobs|H0)
+
+  4. Decision: We reject H0 if the p-value<=alpha(significance level)
+
+
+
+
+
+
+
+
+
