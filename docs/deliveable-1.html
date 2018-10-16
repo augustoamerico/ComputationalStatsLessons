@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="lesson-3.html">
+<link rel="prev" href="deliverables.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -157,17 +157,117 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lessons-2" class="section level1">
-<h1><span class="header-section-number">2</span> Lessons 2</h1>
-<div id="random-variables-and-vectors" class="section level2">
-<h2><span class="header-section-number">2.1</span> Random Variables and Vectors</h2>
-<div id="elements-of-probability" class="section level3">
-<h3><span class="header-section-number">2.1.1</span> Elements of probability</h3>
-<p>A random variable <span class="math inline">\(\bold{X}\)</span> is a function that takes an event space and return a value:</p>
-<p><span class="math display">\[ X: \Omega \rightarrow {\rm I\!R}\]</span></p>
+<div id="deliveable-1" class="section level1">
+<h1><span class="header-section-number">5</span> Deliveable 1</h1>
+<div id="exercise-1" class="section level2">
+<h2><span class="header-section-number">5.1</span> Exercise 1</h2>
+<ol style="list-style-type: decimal">
+<li>Consider the continuous random variable <span class="math inline">\(X\)</span> with pdf: <span class="math display">\[
+f(x) = \left\{
+\begin{array}{ll}
+ \frac{4}{3}(x^3 + x) \quad \qquad 0 &lt; x &lt; 1\\
+ 0, \qquad \qquad \qquad\text{for all others } x \text{ values}\\
+\end{array} 
+\right. 
+\]</span></li>
+</ol>
+<p>Now consider the random variable <span class="math inline">\(Y = g(X)\)</span>, where <span class="math inline">\(g(x) = log(x^2 + 4)\)</span>. Estimate <span class="math inline">\(P(1.3 &lt; Y &lt; 1.5)\)</span> using the Monte Carlo Method, as well as the estimator standard deviation.</p>
+<hr />
+<p><span class="math display">\[
+P(1.3 &lt; Y &lt; 1.5) \quad = \quad P(1.3 &lt; g(x) &lt; 1.5) \quad = \quad P(1.3 &lt; log(x^2 + 4) &lt; 1.5) \quad
+\]</span></p>
+<p>Given that <span class="math inline">\(x\)</span> only present values between <span class="math inline">\(0 &lt; x &lt; 1\)</span>, that imples:</p>
+<ul>
+<li>the minimun value of <span class="math inline">\(log(x^2 + 4)\)</span> is <span class="math inline">\(log(4)\)</span></li>
+<li>the maximum value of <span class="math inline">\(log(x^2 + 4)\)</span> is <span class="math inline">\(log(5)\)</span></li>
+</ul>
+<p>Therefore, we know that:</p>
+<p><span class="math display">\[
+P(1.3 &lt; log(x^2 + 4) &lt; log(4)) = 0
+\]</span></p>
+<p>With this taken into consideration, the probability that we want to calculate is:</p>
+<p><span class="math display">\[
+P(log(4) &lt; log(x^2 + 4) &lt; 1.5)
+\]</span></p>
+<p>Which we can know expand into:</p>
+<p><span class="math display">\[
+P(log(4) &lt; log(x^2 + 4) &lt; 1.5) \quad = \quad P(4 &lt; x^2 + 4 &lt; e^{1.5}) \quad = \quad P(0 &lt; x^2  &lt; e^{1.5}-4) \quad = \quad P(0 &lt; x  &lt; \sqrt{e^{1.5}-4})
+\]</span></p>
+<p>So, we now know that the probability we want to calculate can be obtain by the following integral:</p>
+<span class="math display" id="eq:integralProb">\[\begin{equation} 
+  \int_{0}^{\sqrt{e^{1.5}-4}} \frac{4}{3}(x^3 + x) dx
+  \tag{5.1}
+\end{equation}\]</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mc &lt;-<span class="st"> </span><span class="cf">function</span>(t){
+  k &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">exp</span>(<span class="fl">1.5</span>)<span class="op">-</span><span class="dv">4</span>)
+  <span class="kw">return</span> ( (<span class="dv">4</span><span class="op">/</span><span class="dv">3</span>) <span class="op">*</span><span class="st"> </span>((k<span class="op">*</span>t)<span class="op">^</span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span>k<span class="op">*</span>t) <span class="op">*</span>k )
+}
+
+<span class="co">#t follows an uniform</span>
+
+sample &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">100000</span>)
+pEst &lt;-<span class="st"> </span><span class="kw">mean</span>(<span class="kw">mc</span>(sample))
+
+varEstimator &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>(<span class="kw">length</span>(sample)<span class="op">^</span><span class="dv">2</span>))<span class="op">*</span><span class="kw">sum</span>((<span class="kw">mc</span>(sample)<span class="op">-</span>pEst)<span class="op">^</span><span class="dv">2</span>)
+df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(
+  <span class="dt">probEstimated =</span> pEst,
+  <span class="dt">varianceMC =</span> varEstimator
+)
+
+knitr<span class="op">::</span><span class="kw">kable</span>(df, <span class="dt">format =</span> knitr<span class="op">:::</span><span class="kw">pandoc_to</span>())</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+probEstimated
+</th>
+<th style="text-align:right;">
+varianceMC
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0.397763
+</td>
+<td style="text-align:right;">
+7e-07
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="expected-value" class="section level3">
-<h3><span class="header-section-number">2.1.2</span> Expected value</h3>
+<div id="exercise-2" class="section level2">
+<h2><span class="header-section-number">5.2</span> Exercise 2</h2>
+<div id="section" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> 2.1</h3>
+</div>
+<div id="section-1" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> 2.2</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lambda &lt;-<span class="st"> </span><span class="fl">0.5</span>
+samples &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1000</span>)
+
+
+inverseExp &lt;-<span class="st"> </span><span class="cf">function</span>(u, lambda){
+  <span class="op">-</span>(<span class="dv">1</span><span class="op">/</span>lambda)<span class="op">*</span><span class="kw">log</span>(<span class="dv">1</span><span class="op">-</span>u)
+}
+
+values &lt;-<span class="st"> </span><span class="kw">inverseExp</span>(samples, lambda)
+
+<span class="kw">hist</span>(values, <span class="dt">breaks=</span><span class="dv">100</span>, <span class="dt">freq =</span> F)</code></pre></div>
+<p><img src="Multivariate_Stats_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">g &lt;-<span class="st"> </span><span class="cf">function</span>(x){
+  <span class="kw">exp</span>(<span class="kw">sqrt</span>(x))<span class="op">*</span>(<span class="dv">2</span><span class="op">/</span>(<span class="kw">sqrt</span>(<span class="dv">2</span><span class="op">*</span>pi)))<span class="op">*</span>x<span class="op">^</span>(<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)
+}
+
+X &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10000</span>)
+Y &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10000</span>)
+
+EX &lt;-<span class="st"> </span><span class="kw">mean</span>(<span class="kw">g</span>(<span class="kw">inverseExp</span>(X, lambda)))
+EY &lt;-<span class="st"> </span><span class="kw">mean</span>(<span class="kw">g</span>(<span class="kw">inverseExp</span>(Y, lambda)))</code></pre></div>
+
+
 </div>
 </div>
 </div>
@@ -176,8 +276,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lesson-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="deliverables.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
