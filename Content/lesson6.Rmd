@@ -1,0 +1,73 @@
+---
+title: "Computational Stats"
+site: bookdown::bookdown_site
+---
+
+# Lesson 3
+
+```{r include = F}
+library(dplyr)
+```
+
+
+
+# Estimating Pi with the Monte Carlo controled by a variable
+
+```{r}
+
+g <- function(x){
+  sqrt(1-x^2)*4
+}
+
+#create sample from uniform distribution
+set.seed(1)
+n <- 50000
+sample <- runif(n)
+
+
+EstControled <- function(sample){
+  piEst <- mean(g(sample))
+  return(piEst - beta*(mean(sample)-1/2))
+}
+
+EstControledVar <- function(sample){
+  n <- length(sample)
+  piEst <- (1/(3*n))*(32-(3*mean(g(sample))^2))
+  return(piEst + beta^2*(1/(12*n)) - 2*beta*((1/(6*n)*(8-3*piEst))))
+}
+
+#pi estimated
+piEst <- mean(g(sample))
+
+#pi variance
+varPiEst <- (1/(3*n))*(32-(3*piEst^2))
+
+
+#estimatorControlled
+
+beta <- (2*(8-(3*piEst)))
+
+
+
+piEstControled <- EstControled(sample)
+varPiEstControlled <- EstControledVar(sample)
+
+runs <- list(10,50,100,500,1000,5000,10000)
+
+experiment <- lapply(runs, function(n){
+  sample <- runif(n)
+  piEst <- mean(g(sample))
+  varPiEst <- (1/(3*n))*(32-(3*piEst^2))
+  piEstControled <- EstControled(sample)
+  varPiEstControlled <- EstControledVar(sample)
+  return(data.frame(
+    piEst = piEst,
+    varPiEst = varPiEst,
+    piEstControled = piEstControled,
+    varPiEstControlled = varPiEstControlled
+  ))
+})
+df <- do.call("rbind", experiment)
+
+
+```

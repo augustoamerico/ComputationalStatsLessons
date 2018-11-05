@@ -1,0 +1,155 @@
+---
+title: "Computational Stats"
+subtitle: "Group III"
+site: bookdown::bookdown_site
+output: pdf_document
+---
+
+```{r include = F}
+library(tinytex)
+#https://github.com/rstudio/rmarkdown/issues/1285
+```
+
+# Trabalho 2
+
+## Exercício 1
+
+### a
+```{r}
+sample<-c(7.0,3.5,11.9,8.9,10.1,1.2,1.1,7.9,12.9,1.3,5.2,5.1,3.9,2.5,10.4,6.2,-3.9)
+
+norm.maximLikelihoodEst.var <- function(sample){
+  n <- length(sample)
+  sample.mean <- mean(sample)
+  sum((sample - sample.mean)^2)/n
+}
+
+norm.maximLikelihoodEst.var(sample)
+
+```
+
+```{r}
+#Jackknife for bias estimation  
+bJackBias<-function(sample)
+{
+  miu<-mean(sample)
+  n<-length(sample)
+  tetaSum<-0
+  for (i in sample) 
+  {
+    tetaSum<-tetaSum+(i-miu)^2
+  }
+  teta<-(1/n)*tetaSum
+  print(teta)
+  
+  bJackSum <- 0
+  bJackVector <- c()
+
+  for(j in 1:n){
+    bJackVector <- c(bJackVector, (n-1)*(teta-norm.maximLikelihoodEst.var(sample[-j])))
+    bJackSum <- (n-1)*(teta-norm.maximLikelihoodEst.var(sample[-j])) + bJackSum
+  }
+  print(-mean(bJackVector))
+  print(-sum(bJackVector)/n)
+  print(-bJackSum/n)
+  return(-(1/n)*bJackSum)
+  
+  # for (j in sample) 
+  # {
+  #   tetaSumLOO<-0
+  #   for(k in sample)
+  #   {
+  #     if(k!=j)
+  #       tetaSumLOO<-tetaSumLOO+(k-miu)^2  
+  #   }
+  #   tetaLOO<-(1/(n))*tetaSumLOO #**
+  #   bJackSum<-(n-1)*(teta-tetaLOO)
+  # }
+  # return((1/n)*bJackSum)
+}
+
+#Jackknife for variance estimation
+bJackVariance<-function(sample)
+{
+  miu<-mean(sample)
+  n<-length(sample)
+  bJackBias<-bJackBias(sample)
+  tetaSum<-0
+  for (i in sample) 
+  {
+    tetaSum<-tetaSum+(i-miu)^2
+  }
+  teta<-(1/n)*tetaSum
+  
+  for (j in sample) 
+  {
+    tetaSumLOO<-0
+    for(k in sample)
+    {
+      if(k!=j) # calculo da distância ao quadrado
+        tetaSumLOO<-tetaSumLOO+(k-miu)^2  
+    }
+    tetaLOO<-(1/(n-1))*tetaSumLOO #??? 
+    bJackSum<-(((n-1)*(teta-tetaLOO))^2)-n*(bJackBias^2) #???
+  }
+  return((1/(n*(n-1)))*bJackSum)  
+}
+
+
+sample<-c(7,3.5,11.9,8.9,10.1,1.2,1.1,7.9,12.9,1.3,5.2,5.1,3.9,2.5,10.4,6.2,-3.9)
+bias<-bJackBias(sample)
+variance<-bJackVariance(sample)
+```
+
+### b
+```{r}
+sample<-c(7.0,3.5,11.9,8.9,10.1,1.2,1.1,7.9,12.9,1.3,5.2,5.1,3.9,2.5,10.4,6.2,-3.9)
+n <- length(sample)
+sample.mean <- mean(sample)
+
+
+ljack <- function(idx, sample, n, sample.mean){
+  (n-1)*(norm.maximLikelihoodEst.var(sample) - norm.maximLikelihoodEst.var(sample[-idx]))
+}
+
+bias.jackknife <- -mean(sapply(1:n, ljack, sample, n ,sample.mean))
+
+ljack.bias.distribution <- sapply(1:n, ljack, sample, n ,sample.mean)
+
+variance.jackknife <- 1/(n*(n-1))*sum(sapply(1:n,function(idx,sample,n,sample.mean){
+  ljack(idx,sample,n,sample.mean)^2 - n*(bias.jackknife^2)
+},sample,n,sample.mean))
+
+
+## Acording Bradley Efron in The Jackknife, the bootstrap and other resampling plans
+ljack.estimated.distribution <- sapply(1:n,function(idx,sample){
+  norm.maximLikelihoodEst.var(sample[-idx])
+},sample)
+
+estimated.jackknife2 <- mean(sapply(1:n,function(idx,sample){
+  norm.maximLikelihoodEst.var(sample[-idx])
+},sample))
+
+variance.jackknife2 <- ((n-1)/n)*sum(sapply(1:n,function(idx,sample){
+   (norm.maximLikelihoodEst.var(sample[-idx]) - estimated.jackknife2)^2
+},sample))
+##
+
+
+plot(density(-ljack.bias.distribution), main=paste0("Density Estimation of Jackknife Bias (mean = ",round(bias.jackknife,3),"; sd = ",round(sqrt(variance.jackknife),3)," )"))
+```
+
+## Exercício 2
+
+### a
+```{r}
+sample <- c(0.05,0.03,0.19,0.14,0.12,0.03,0.08,0.19,0.07,0.01,0.24,0.10,0.03,0.31)
+
+exp.maximLikelihoodEst.var <- function(sample){
+  1/mean(sample)
+}
+
+exp.maximLikelihoodEst.var(sample)
+
+```
+
