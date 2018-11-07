@@ -229,8 +229,32 @@ variance.bootstrap <- sum((estimated.bootstrap - mean(estimated.bootstrap))^2)/(
 ```
 
 
-### 2 b)
+### c)
 
-Sendo:
-$\hat{\theta}^*$ corresponde aos valores estimados com o estimador apresentado na alínea a) através dos valores obtidos em cada amostra bootstrap.
-$\hat{\theta}$ corresponde aos valores estimados com o estimador apresentado na
+```{r}
+
+alpha <- 0.025/2
+
+distance.booststrap <- sapply(1:R, function(idx,sample){
+  exp.maximLikelihoodEst.var(rexp(length(sample),exp.maximLikelihoodEst.var(sample))) - exp.maximLikelihoodEst.var(sample) 
+},sample)
+distance.booststrap <- c(distance.booststrap,0)
+distance.booststrap.sorted <- sort(distance.booststrap, decreasing = F)
+
+ahat_left <- distance.booststrap.sorted[(R+1)*alpha]
+ahat_right <- distance.booststrap.sorted[(R+1)*(1-alpha)]
+
+distance.booststrap.df <- data.frame(
+  distance.booststrap = distance.booststrap
+)
+ci.df <- data.frame(
+  x = c(ahat_left,ahat_right), y = c(0,0), xend = c(ahat_left,ahat_right), yend = c(0.17,0.17)
+)
+library(ggplot2)
+library(plotly)
+plotly::ggplotly(ggplot2::ggplot(distance.booststrap.df, aes(x=distance.booststrap)) + geom_density() +
+  geom_segment(aes(x = x, y = y, xend = xend, yend = yend, linetype="dotted", colour = "0.0125"),data=ci.df[1,]) + 
+  geom_segment(aes(x = x, y = y, xend = xend, yend = yend, linetype="dotted", colour = "0.9875"),data=ci.df[2,]))
+                 
+```
+
