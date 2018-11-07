@@ -28,7 +28,16 @@ norm.maximLikelihoodEst.var(sample)
 
 ```
 
+### b
+
 ```{r}
+norm.maximLikelihoodEst.var<-function(sample)
+{
+  n<-length(sample)
+  sample.mean<-mean(sample)
+  return(sum((sample-sample.mean)^2)/n)
+}
+
 #Jackknife for bias estimation  
 bJackBias<-function(sample)
 {
@@ -39,69 +48,50 @@ bJackBias<-function(sample)
   {
     tetaSum<-tetaSum+(i-miu)^2
   }
-  teta<-(1/n)*tetaSum
-  print(teta)
+  teta<-(1/n)*tetaSum 
   
-  bJackSum <- 0
-  bJackVector <- c()
-
-  for(j in 1:n){
-    bJackVector <- c(bJackVector, (n-1)*(teta-norm.maximLikelihoodEst.var(sample[-j])))
-    bJackSum <- (n-1)*(teta-norm.maximLikelihoodEst.var(sample[-j])) + bJackSum
+  bJackSum<-0
+  bJackVector<-0
+  
+  for(j in 1:n)
+  {
+    bJackVector<-c(bJackVector,(n-1)*teta-norm.maximLikelihoodEst.var(sample[-j]))
+    bJackSum<-(n-1)*(teta-norm.maximLikelihoodEst.var(sample[-j]))+bJackSum    
   }
-  print(-mean(bJackVector))
-  print(-sum(bJackVector)/n)
-  print(-bJackSum/n)
   return(-(1/n)*bJackSum)
-  
-  # for (j in sample) 
-  # {
-  #   tetaSumLOO<-0
-  #   for(k in sample)
-  #   {
-  #     if(k!=j)
-  #       tetaSumLOO<-tetaSumLOO+(k-miu)^2  
-  #   }
-  #   tetaLOO<-(1/(n))*tetaSumLOO #**
-  #   bJackSum<-(n-1)*(teta-tetaLOO)
-  # }
-  # return((1/n)*bJackSum)
 }
 
 #Jackknife for variance estimation
-bJackVariance<-function(sample)
+vJackVariance<-function(sample)
 {
   miu<-mean(sample)
   n<-length(sample)
-  bJackBias<-bJackBias(sample)
   tetaSum<-0
+  bJackBias<-bJackBias(sample)
   for (i in sample) 
   {
     tetaSum<-tetaSum+(i-miu)^2
   }
-  teta<-(1/n)*tetaSum
+  teta<-(1/n)*tetaSum 
   
-  for (j in sample) 
+  vJackSum<-0
+  vJackVector<-0
+  
+  for(j in 1:n)
   {
-    tetaSumLOO<-0
-    for(k in sample)
-    {
-      if(k!=j) # calculo da distância ao quadrado
-        tetaSumLOO<-tetaSumLOO+(k-miu)^2  
-    }
-    tetaLOO<-(1/(n-1))*tetaSumLOO #??? 
-    bJackSum<-(((n-1)*(teta-tetaLOO))^2)-n*(bJackBias^2) #???
+    #vJackVector<-c(vJackVector,(n-1)*((teta-norm.maximLikelihoodEst.var(sample[-j]))^2-n*(bJackBias^2)))
+    vJackSum<-(((n-1)*(teta-norm.maximLikelihoodEst.var(sample[-j])))^2-n*(bJackBias^2))+vJackSum    
   }
-  return((1/(n*(n-1)))*bJackSum)  
+  return((1/(n*(n-1)))*vJackSum)
 }
 
-
 sample<-c(7,3.5,11.9,8.9,10.1,1.2,1.1,7.9,12.9,1.3,5.2,5.1,3.9,2.5,10.4,6.2,-3.9)
-bias<-bJackBias(sample)
-variance<-bJackVariance(sample)
+bJackBias(sample)
+vJackVariance(sample)  
+
 ```
 
-### b
+
 ```{r}
 sample<-c(7.0,3.5,11.9,8.9,10.1,1.2,1.1,7.9,12.9,1.3,5.2,5.1,3.9,2.5,10.4,6.2,-3.9)
 n <- length(sample)
@@ -136,8 +126,68 @@ variance.jackknife2 <- ((n-1)/n)*sum(sapply(1:n,function(idx,sample){
 ##
 
 
-plot(density(-ljack.bias.distribution), main=paste0("Density Estimation of Jackknife Bias (mean = ",round(bias.jackknife,3),"; sd = ",round(sqrt(variance.jackknife),3)," )"))
+plot(density(-ljack.bias.distribution), main=paste0("Density Estimation of Jackknife Bias (mean = ",round(bias.jackknife,3)," )"))
 ```
+
+### c
+
+```{r}
+#KS_statDist implemented with normal distribution 
+KS_statDist<-function(sample,mean,sd)
+{
+  sample<-sort(sample)
+  n<-length(sample)
+  DVecA<-rep(0, n)
+  DVecB<-rep(0, n)
+  for(j in c(1:n))
+  {
+    DVecA[j]<-(j/n)-pnorm(sample[j],mean,sd)
+    DVecB[j]<-pnorm(sample[j],mean,sd)-((j-1)/n)
+  }
+  DVecAA <- sapply(1:n,function(idx){(j/n)-pnorm(sample[j],mean,sd)})
+  DVecBB <- sapply(1:n,function(idx){pnorm(sample[j],mean,sd)-((j-1)/n)})
+  #print(which.max(DVecA))
+  #print(max(DVecA))
+  #print(which.max(DVecB))
+  #print(max(DVecB))
+  return(max(c(DVecA,DVecB)))
+}
+
+#Kolmogorov-Smirnov test
+sample<-sort(c(7,3.5,11.9,8.9,10.1,1.2,1.1,7.9,12.9,1.3,5.2,5.1,3.9,2.5,10.4,6.2,-3.9),decreasing = FALSE)
+d<-KS_statDist(sample,5,sqrt(5))
+
+#plot
+EmpCDF<-ecdf(sample)
+NormCDF<-pnorm(sample,5,sqrt(5))
+plot(EmpCDF,main="Kolmogorov-Smirnov Test")
+lines(sample,NormCDF,col="red")
+
+MCsampleNum<-2000
+m<-length(sample)
+DVec<-rep(0, m)
+pValueNumerator<-0
+for (k in c(1:MCsampleNum)) 
+{
+  #D calculation of the generated MC samples 
+  DVec[k]<-KS_statDist(rnorm(m,5,sqrt(5)),5,sqrt(5))
+  if(DVec[k]>=d)
+    pValueNumerator<-pValueNumerator+1
+}
+
+DVec.df <- data.frame(
+  pts = DVec
+)
+library(ggplot2)
+p <- ggplot2::ggplot(DVec.df, aes(x=pts)) + 
+  geom_density()
+plot(density(DVec))
+
+#p-value calculation
+pValue<-(pValueNumerator+1)/(MCsampleNum+1)
+
+```
+
 
 ## Exercício 2
 
@@ -153,3 +203,34 @@ exp.maximLikelihoodEst.var(sample)
 
 ```
 
+### b
+
+Viés:
+$$E(\hat{\Psi}-\Psi)\approx b_{boot}(\hat{\Psi})= \frac{1}{R}.\sum_{r=1}^R.(\hat{\Psi}_r^*-\hat{\Psi})$$
+
+
+```{r}
+R <- 999
+bias.bootstrap <- mean(sapply(1:R, function(idx,sample){
+  exp.maximLikelihoodEst.var(rexp(length(sample),exp.maximLikelihoodEst.var(sample))) - exp.maximLikelihoodEst.var(sample) 
+},sample))
+```
+
+$$
+Var(\hat{\Psi}-\Psi)\approx Var_{boot}=\frac{1}{R-1}\sum_{r=1}^R*(\hat{\Psi}_r^*-\hat{\Psi}^*)^2
+$$
+
+```{r}
+estimated.bootstrap <- sapply(1:R, function(idx,sample){
+  exp.maximLikelihoodEst.var(rexp(length(sample),exp.maximLikelihoodEst.var(sample)))
+},sample)
+
+variance.bootstrap <- sum((estimated.bootstrap - mean(estimated.bootstrap))^2)/(R-1)
+```
+
+
+### 2 b)
+
+Sendo:
+$\hat{\theta}^*$ corresponde aos valores estimados com o estimador apresentado na alínea a) através dos valores obtidos em cada amostra bootstrap.
+$\hat{\theta}$ corresponde aos valores estimados com o estimador apresentado na
