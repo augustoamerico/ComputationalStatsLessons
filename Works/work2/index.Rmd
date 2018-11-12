@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 link-citations: yes
 biblatex: yes
-output: pdf_document
+bibliography: [citations.bib]
 ---
 ```{r include = FALSE}
 options(tz="Europe/Lisbon")

@@ -28,6 +28,7 @@ confidence_interval_plot <- function(sample, ci.left, ci.right){
   )
   ggplotdata <- ggplot2::ggplot_build(ggplot2::ggplot(sample.df, aes(x=sample)) + geom_density())
   plt.data <- ggplotdata$data[[1]]
+  summary(plt.data)
   plt.data$density <- plt.data$density/sum(plt.data$density)
   plt.data$cumDens <- cumsum(plt.data$density)
   ahat_left.apprx <- approx(x=plt.data$x, y=plt.data$y,xout=ci.left)
@@ -508,20 +509,11 @@ $$
 \hat{z_r^*}=\frac{\hat{\theta_r^*}-\hat{\theta}}{\sqrt{v_r^*}}
 $$
 
-```{r}
+This method can be more accurate when compared to the basic bootstrap interval, while being more computational demanding[@cmu-bootstrap].
 
+```{r}
 alpha <- 0.025/2
 
-set.seed(1)
-vs <- sapply(1:R, function(idx,sample){
-  R <- 999
-  sample.phi <- exp.maximLikelihoodEst.lambda(sample)
-  sample.bootstrap <- rexp(length(sample),sample.phi)
-  sample.bootstrap.phi <- exp.maximLikelihoodEst.lambda(sample.bootstrap)
-  
-  v <- bootstrap.var(sample.bootstrap,R)
-  return(sqrt(v))
-},sample)
 set.seed(1)
 distance.booststrap.studantized <- sapply(1:R, function(idx,sample){
   R <- 999
@@ -537,7 +529,18 @@ distance.booststrap.studantized <- sapply(1:R, function(idx,sample){
 
 
 
-```{r echo = F}
+```{r echo = F, include = F}
+set.seed(1)
+vs <- sapply(1:R, function(idx,sample){
+  R <- 999
+  sample.phi <- exp.maximLikelihoodEst.lambda(sample)
+  sample.bootstrap <- rexp(length(sample),sample.phi)
+  sample.bootstrap.phi <- exp.maximLikelihoodEst.lambda(sample.bootstrap)
+  
+  v <- bootstrap.var(sample.bootstrap,R)
+  return(sqrt(v))
+},sample)
+
 distance.booststrap.studantized.df <- data.frame(
   distances = distance.booststrap.studantized
 )
@@ -551,7 +554,7 @@ vs.df <- data.frame(
 vs.data <- ggplot_build(ggplot2::ggplot(vs.df, aes(x=vs)) + geom_density())$data[[1]]
 ```
 
-```{r distribs-btstrp-std-html, eval=(!identical(knitr:::pandoc_to(), 'latex')), warning=F, echo=F,fig.cap="Density estimations of pivot stat $\\hat{\\theta - \\theta}$, the bootstrap variance and the pivot stat $z$", env="figure",screenshot.opts=list(delay=1,vwidth = 1000,vheight=500), warning=F, echo=F,fig.align='center'}
+```{r distribs-btstrp-std-html, include = F, eval=(!identical(knitr:::pandoc_to(), 'latex')), warning=F, echo=F,fig.cap="Density estimations of pivot stat $\\hat{\\theta - \\theta}$, the bootstrap variance and the pivot stat $z$", env="figure",screenshot.opts=list(delay=1,vwidth = 1000,vheight=500), warning=F, echo=F,fig.align='center'}
 plotly::subplot(
   plotly::ggplotly(ggplot2::ggplot(distance.booststrap.data,aes(x=x,y=y))+geom_line())
   ,plotly::ggplotly(ggplot2::ggplot(vs.data,aes(x=x,y=y))+geom_line())
@@ -559,7 +562,7 @@ plotly::subplot(
 ,nrows = 3)
 ```
 
-```{r distribs-btstrp-std-ltx, eval=(identical(knitr:::pandoc_to(), 'latex')), warning=F, echo=F,fig.cap="Density estimations of pivot stat $\\hat{\\theta - \\theta}$, the bootstrap variance and the pivot stat $z$", env="figure",screenshot.opts=list(delay=1,vwidth = 1000,vheight=500), warning=F, echo=F, out.width='.90\\linewidth',fig.align='center'}
+```{r distribs-btstrp-std-ltx, include = F, eval=(identical(knitr:::pandoc_to(), 'latex')), warning=F, echo=F,fig.cap="Density estimations of pivot stat $\\hat{\\theta - \\theta}$, the bootstrap variance and the pivot stat $z$", env="figure",screenshot.opts=list(delay=1,vwidth = 1000,vheight=500), warning=F, echo=F, out.width='.90\\linewidth',fig.align='center'}
 plotly::subplot(
   plotly::ggplotly(ggplot2::ggplot(distance.booststrap.data,aes(x=x,y=y))+geom_line())
   ,plotly::ggplotly(ggplot2::ggplot(vs.data,aes(x=x,y=y))+geom_line())
@@ -568,15 +571,15 @@ plotly::subplot(
 ```
 
 
-```{r}
+```{r bootstrap-t}
 distance.booststrap.studantized <- c(distance.booststrap.studantized,0)
 distance.booststrap.studantized.sorted <- sort(distance.booststrap.studantized, decreasing = F)
 
 ahat.stdzd_left <- distance.booststrap.studantized.sorted[(R+1)*alpha]*sqrt(variance.bootstrap)
 ahat.stdzd_right <- distance.booststrap.studantized.sorted[(R+1)*(1-alpha)]*sqrt(variance.bootstrap)
 
-ci_left.stdzd <- exp.maximLikelihoodEst.lambda.estimated-ahat_right
-ci_right.stdzd <- exp.maximLikelihoodEst.lambda.estimated-ahat_left
+ci_left.stdzd <- exp.maximLikelihoodEst.lambda.estimated-ahat.stdzd_right
+ci_right.stdzd <- exp.maximLikelihoodEst.lambda.estimated-ahat.stdzd_left
 ```
 
 ```{r echo = F}
@@ -593,5 +596,4 @@ Discuss the results of items (c) and (d). Choose $\alpha = 0.025$ as the signifi
 
 ____
 
-The distributions in figures \@ref(fig:bootstrap) and \@ref(fig:bootstrap-stdzdz) do not present the same shape and this is due of the term $v_r^*$ from $z_r^*=\frac{\hat{\theta_r^*}-\hat{\theta}}{\sqrt{v_r^*} }$.
-This change of shape can also be understood in figure \@ref(fig:distribs-btstrp-std-`r LatexOrOther("ltx","html")`) since this occurs because the term $v_r^*$ acts like a regularizator.
+The values in these confidence intervals are pretty 
