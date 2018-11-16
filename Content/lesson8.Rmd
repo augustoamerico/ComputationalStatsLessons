@@ -1,0 +1,131 @@
+---
+title: "Computational Stats"
+site: bookdown::bookdown_site
+---
+
+# Lesson 3
+
+```{r include = F}
+library(dplyr)
+datasetsDir=file.path(PROJHOME,"datasets")
+```
+
+
+
+```{r}
+
+set.seed(121)
+
+sample <- rbinom(100,1,0.32)
+
+barplot(table(sample))
+
+sample.mean <- mean(sample)
+
+menos.log.L <- function(x){
+  #computes the simetric of the log Likelihood for a Bernoulli sample
+  function(theta){
+    n <- length(x)
+    -(sum(x)*log(theta)+(n-sum(x))*log(1-theta))
+  }
+}
+
+thetas <- seq(0,1,0.01)
+
+
+plot(thetas, menos.log.L(sample)(thetas),type="l",main="plot of the function -log.Likelihood")
+abline(v=sample.mean)
+```
+
+```{r}
+stats4::mle(menos.log.L(sample),start=list(theta=0.2))
+
+```
+
+```{r}
+score.BER <- function(x){
+  function(theta){
+    n <- length(x)
+    sum(x)/theta-(n-sum(x))/(1-theta)
+  }
+}
+
+SC <- score.BER(sample)
+
+uniroot(SC,lower=0,upper=1)
+
+```
+
+
+```{r}
+met.scores.BER <- function(x, phi0=0,convergence=0.0000001){
+  cont = T
+  phi.next = phi0
+  cnt <- list()
+  cnt[[1]] <- list(it=0,err=NA)
+  while(cont){
+    phi.current <- phi.next
+    phi.next <- phi.current + (1+exp(phi.current))*(mean(x)/exp(phi.current)+mean(x)-1)
+    err <- abs(phi.next - phi.current)
+    cont <- err > convergence
+    cnt[[length(cnt)+1]] <-  list(it=cnt[[length(cnt)]]$it+1,err=err)
+  }
+  cnt[[1]] <- NULL
+  return(
+    list(
+      value = phi.next,
+      iterations=cnt
+    )
+  )
+}
+
+rs <- met.scores.BER(sample)
+```
+
+
+```{r}
+emp <- read.table(file.path(datasetsDir,"empresas.txt"), header=F)
+
+#Modelo Regressão Multipla
+est.MRM <- function(y,x){
+  Y <- as.matrix(y)
+  x.matrix <- as.matrix(x)
+  X <- cbind(1,x.matrix)
+  beta.estimated <- solve(t(X)%*%X)%*%t(X)%*%Y
+  rownames(beta.estimated) <- paste0(c("Intercept",rep("Beta",length(beta.estimated)-1)),c("",as.character(2:length(beta.estimated))))
+  return(beta.estimated)
+}
+
+betas <- est.MRM(y=emp$V5,x=emp[,-c(1,5)])
+betas
+
+lm(V5 ~ V2 + V3 + V4, data=emp)
+
+```
+
+```{r}
+sigma2 <- function(y,x,betas){
+  #computes the variance of the residuals
+  x.matrix <- as.matrix(x)
+  X <- cbind(1,x.matrix)
+  
+  return(
+    list(
+      sigma2 = (t(Y-X%*%betas)%*%(Y-X%*%betas))/(nrow(x.matrix)-(length(betas)-1)),
+      errors = (Y-X%*%betas)
+    )
+  )
+}
+errors <- sigma2(y=emp$V5,x=emp[,-c(1,5)],betas=betas)
+
+est.MRM.var <- errors$sigma2
+plot(density(errors$errors))
+```
+
+```{r}
+est.MVC <- function(){
+  #estimates the variance-covariance matrix
+  
+}
+```
+

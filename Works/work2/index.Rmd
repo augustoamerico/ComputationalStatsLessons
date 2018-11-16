@@ -1,7 +1,8 @@
 --- 
 title: "Computational Stats Deliverable 2"
 author: "António Coelho, Gonçalo Arsénio, Sara Vigário, Tiago dos Santos"
-date: "`r Sys.Date()`"
+#date: "`r Sys.Date()`"
+date: "2018-11-09"
 site: bookdown::bookdown_site
 link-citations: yes
 biblatex: yes

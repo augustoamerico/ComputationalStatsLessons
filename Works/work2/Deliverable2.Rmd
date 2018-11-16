@@ -1,7 +1,7 @@
 ---
 title: "Computational Stats Deliverable 2"
 author: "Group III: António Coelho, Gonçalo Arsénio, Sara Vigário, Tiago dos Santos"
-date: "2018-11-07"
+date: "2018-11-09"
 site: bookdown::bookdown_site
 #header-includes:
 #    - \usepackage{mathtools}
@@ -20,6 +20,9 @@ LatexOrOther <- function(latex, other){
     latex 
   else other
 }
+
+PROJHOME <- "/Users/tiago.correia/courses/MestradoBigData/EstatisticaNumericaComputacional"
+this.path = file.path(PROJHOME,"Works","work2")
 
 
 confidence_interval_plot <- function(sample, ci.left, ci.right){
@@ -69,7 +72,7 @@ Consider the following sample:
 c(7.0,3.5,11.9,8.9,10.1,1.2,1.1,7.9,12.9,1.3,5.2,5.1,3.9,2.5,10.4,6.2,-3.9)
 ```
 
-## Determine Maximum-Likelihood in 
+## Normal variance MLE {#sub:normal-mle-var}
 Assume that the given sample originated from a random variable with a normal distribution whose parameter $\sigma^2$ is unknown. Use the sample to determine the maximum-likelihood estimator of the parameter $\sigma^2$.
 
 _____
@@ -142,7 +145,7 @@ norm.maximLikelihoodEst.var(sample)
 
 ```
 
-## 1 b)
+## Jackknife bias and variance
 
 Determine the Jackknife bias and variance of the estimator obtained in the item (a), and discuss the quality of the estimator.
 
@@ -232,7 +235,7 @@ variance.jackknife2 <- ((n-1)/n)*sum(sapply(1:n,function(idx,sample){
 ```
 
 
-## 1 c)
+## Kolmogorov-Smirnov Test
 
 Consider the null hypothesis $H_0$: The sample was generated from a random variable with a normal distribution with parameters   $(\mu, \sigma^2)$ = $(5,5)$. Use the test statistic's empirical distribution function  to estimate the Kolmogorov-Smirnov test statistic's p-value. Explain why the test statistic is adequate considering the type of null hypothesis we are trying to test.
 
@@ -344,7 +347,7 @@ pValue
 
 # Problem 2
 
-## 2 a)
+## Exponential parameter MLE
 
 Assume that the given sample originated from a random variable with a exponential distribution whose parameter $\lambda$ is unknown. Use the sample to determine the maximum-likelihood estimator of the parameter $\lambda$ 
 
@@ -390,7 +393,7 @@ exp.maximLikelihoodEst.lambda.estimated
 
 ```
 
-## 2 b)
+## Bootstrap bias and variance
 
 Determine the Bootstrap bias and variance of the estimator obtained in the item (a). 
 
@@ -402,6 +405,7 @@ $$E(\hat{\Psi}-\Psi)\approx b_{boot}(\hat{\Psi})= \frac{1}{R}.\sum_{r=1}^R.(\hat
 
 ```{r bias-bootstrap}
 R <- 999
+set.seed(1)
 bias.bootstrap <- mean(sapply(1:R, function(idx,sample,sample.psi){
   sample.bootstrap <- rexp(length(sample),sample.psi)
   sample.bootstrap.psi <- exp.maximLikelihoodEst.lambda(sample.bootstrap)
@@ -431,7 +435,7 @@ variance.bootstrap
 ```
 
 
-## 2 c)
+## Bootstrap confidence interval
 
 Construct a basic Bootstrap confidence interval for $\lambda$
 
@@ -456,38 +460,50 @@ $\hat{a_{\alpha-1}}=\theta_{((R+1)(\alpha-1))}^*-\hat{\theta}$
 
 ```{r warning=F}
 
-alpha <- 0.025/2
 set.seed(1)
 
-distance.booststrap <- sapply(1:R, function(idx,sample,sample.phi){
-  sample.bootstrap <- rexp(length(sample),sample.phi)
-  sample.bootstrap.phi <- exp.maximLikelihoodEst.lambda(sample.bootstrap)
+boot.ci <- function(sample, R, alphaG, exp.maximLikelihoodEst.lambda.estimated, variance.bootstrap){
+  alpha <- alphaG/2
+  distance.booststrap <- sapply(1:R, function(idx,sample,sample.phi){
+    sample.bootstrap <- rexp(length(sample),sample.phi)
+    sample.bootstrap.phi <- exp.maximLikelihoodEst.lambda(sample.bootstrap)
+    
+    sample.bootstrap.phi - sample.phi
+  },sample,exp.maximLikelihoodEst.lambda.estimated)
   
-  sample.bootstrap.phi - sample.phi
-},sample,exp.maximLikelihoodEst.lambda.estimated)
+  distance.booststrap <- c(distance.booststrap,0)
+  distance.booststrap.sorted <- sort(distance.booststrap, decreasing = F)
+  
+  ahat_left <- distance.booststrap.sorted[(R+1)*alpha]
+  ahat_right <- distance.booststrap.sorted[(R+1)*(1-alpha)]
+  
+  sample.bootstraps.phi <- distance.booststrap+exp.maximLikelihoodEst.lambda.estimated
+  ci_left <- exp.maximLikelihoodEst.lambda.estimated-ahat_right
+  ci_right <- exp.maximLikelihoodEst.lambda.estimated-ahat_left
+  
+  return(
+    list(
+      sample.bootstraps.phi = sample.bootstraps.phi,
+      ci_left = ci_left,
+      ci_right = ci_right
+    )
+  )
+}
 
-distance.booststrap <- c(distance.booststrap,0)
-distance.booststrap.sorted <- sort(distance.booststrap, decreasing = F)
-
-ahat_left <- distance.booststrap.sorted[(R+1)*alpha]
-ahat_right <- distance.booststrap.sorted[(R+1)*(1-alpha)]
-
-sample.bootstraps.phi <- distance.booststrap+exp.maximLikelihoodEst.lambda.estimated
-ci_left <- exp.maximLikelihoodEst.lambda.estimated-ahat_right
-ci_right <- exp.maximLikelihoodEst.lambda.estimated-ahat_left
-
+boot_cis <- boot.ci(sample, R, 0.025, exp.maximLikelihoodEst.lambda.estimated, variance.bootstrap)
+sample.bootstraps.phi <- boot_cis$sample.bootstraps.phi
 ```
 
 ```{r echo = F}
-cat(sprintf("left value: %f\nright value: %f",ci_left,ci_right))
+cat(sprintf("left value: %f\nright value: %f",boot_cis$ci_left,boot_cis$ci_right))
 ```
 
 
-```{r bootstrap, warning=F, echo=F,fig.cap="Density estimation of the pivot statistic $\\hat{\\theta - \\theta}$"}
-confidence_interval_plot(sample.bootstraps.phi, ci_left, ci_right)
+```{r bootstrap, warning=F, echo=F,fig.cap="Confidence intervals of 0.025 in the estimate pdf of the estimator $\\lambda$"}
+confidence_interval_plot(boot_cis$sample.bootstraps.phi, boot_cis$ci_left, boot_cis$ci_right)
 ```
 
-## 2 d)
+## Studentized-Bootstrap confidence interval
 
 Construct a Studentized-Bootstrap confidence interval for $\lambda$ (Use the Bootstrap variance estimator to estimate the Bootstrap samples's variance).
 
@@ -512,24 +528,45 @@ $$
 This method can be more accurate when compared to the basic bootstrap interval, while being more computational demanding[@cmu-bootstrap].
 
 ```{r}
-alpha <- 0.025/2
-
+R <- 999
 set.seed(1)
-distance.booststrap.studantized <- sapply(1:R, function(idx,sample){
-  R <- 999
-  sample.phi <- exp.maximLikelihoodEst.lambda(sample)
-  sample.bootstrap <- rexp(length(sample),sample.phi)
-  sample.bootstrap.phi <- exp.maximLikelihoodEst.lambda(sample.bootstrap)
+studentized.ci <- function(sample, R,alphaG,exp.maximLikelihoodEst.lambda.estimated,variance.bootstrap){
+  alpha <- alphaG/2
+
+  distance.booststrap.studantized <- sapply(1:R, function(idx,sample,sample.phi){
   
-  v <- bootstrap.var(sample.bootstrap,R)
+    sample.bootstrap <- rexp(length(sample),sample.phi)
+    sample.bootstrap.phi <- exp.maximLikelihoodEst.lambda(sample.bootstrap)
+    
+    v <- bootstrap.var(sample.bootstrap,R)
+    
+    (sample.bootstrap.phi - sample.phi)/sqrt(v)
+  },sample,exp.maximLikelihoodEst.lambda.estimated)
   
-  (sample.bootstrap.phi - sample.phi)/sqrt(v)
-},sample)
+  distance.booststrap.studantized <- c(distance.booststrap.studantized,0)
+  distance.booststrap.studantized.sorted <- sort(distance.booststrap.studantized, decreasing = F)
+  
+  ahat.stdzd_left <- distance.booststrap.studantized.sorted[(R+1)*alpha]*sqrt(variance.bootstrap)
+  ahat.stdzd_right <- distance.booststrap.studantized.sorted[(R+1)*(1-alpha)]*sqrt(variance.bootstrap)
+
+  
+  ci_left.stdzd <- exp.maximLikelihoodEst.lambda.estimated-ahat.stdzd_right
+  ci_right.stdzd <- exp.maximLikelihoodEst.lambda.estimated-ahat.stdzd_left
+  return(
+    list(
+      ci_left = ci_left.stdzd,
+      ci_right = ci_right.stdzd
+    )
+  )
+}
+studentized.ci.values <- studentized.ci(sample, R, 0.025, exp.maximLikelihoodEst.lambda.estimated, variance.bootstrap)
+
+
 ```
 
 
 
-```{r echo = F, include = F}
+```{r echo = F, eval= F,include = F}
 set.seed(1)
 vs <- sapply(1:R, function(idx,sample){
   R <- 999
@@ -554,7 +591,7 @@ vs.df <- data.frame(
 vs.data <- ggplot_build(ggplot2::ggplot(vs.df, aes(x=vs)) + geom_density())$data[[1]]
 ```
 
-```{r distribs-btstrp-std-html, include = F, eval=(!identical(knitr:::pandoc_to(), 'latex')), warning=F, echo=F,fig.cap="Density estimations of pivot stat $\\hat{\\theta - \\theta}$, the bootstrap variance and the pivot stat $z$", env="figure",screenshot.opts=list(delay=1,vwidth = 1000,vheight=500), warning=F, echo=F,fig.align='center'}
+```{r distribs-btstrp-std-html, include = F, eval=(!identical(knitr:::pandoc_to(),  'latex')), eval = F,warning=F, echo=F,fig.cap="Density estimations of pivot stat $\\hat{\\theta - \\theta}$, the bootstrap variance and the pivot stat $z$", env="figure",screenshot.opts=list(delay=1,vwidth = 1000,vheight=500), warning=F, echo=F,fig.align='center'}
 plotly::subplot(
   plotly::ggplotly(ggplot2::ggplot(distance.booststrap.data,aes(x=x,y=y))+geom_line())
   ,plotly::ggplotly(ggplot2::ggplot(vs.data,aes(x=x,y=y))+geom_line())
@@ -562,32 +599,20 @@ plotly::subplot(
 ,nrows = 3)
 ```
 
-```{r distribs-btstrp-std-ltx, include = F, eval=(identical(knitr:::pandoc_to(), 'latex')), warning=F, echo=F,fig.cap="Density estimations of pivot stat $\\hat{\\theta - \\theta}$, the bootstrap variance and the pivot stat $z$", env="figure",screenshot.opts=list(delay=1,vwidth = 1000,vheight=500), warning=F, echo=F, out.width='.90\\linewidth',fig.align='center'}
+```{r distribs-btstrp-std-ltx, include = F, eval=(identical(knitr:::pandoc_to(), 'latex')), eval = F, warning=F, echo=F,fig.cap="Density estimations of pivot stat $\\hat{\\theta - \\theta}$, the bootstrap variance and the pivot stat $z$", env="figure",screenshot.opts=list(delay=1,vwidth = 1000,vheight=500), warning=F, echo=F, out.width='.90\\linewidth',fig.align='center'}
 plotly::subplot(
   plotly::ggplotly(ggplot2::ggplot(distance.booststrap.data,aes(x=x,y=y))+geom_line())
   ,plotly::ggplotly(ggplot2::ggplot(vs.data,aes(x=x,y=y))+geom_line())
   ,plotly::ggplotly(ggplot2::ggplot(distance.booststrap.studantized.data,aes(x=x,y=y))+geom_line())
 ,nrows = 3)
-```
-
-
-```{r bootstrap-t}
-distance.booststrap.studantized <- c(distance.booststrap.studantized,0)
-distance.booststrap.studantized.sorted <- sort(distance.booststrap.studantized, decreasing = F)
-
-ahat.stdzd_left <- distance.booststrap.studantized.sorted[(R+1)*alpha]*sqrt(variance.bootstrap)
-ahat.stdzd_right <- distance.booststrap.studantized.sorted[(R+1)*(1-alpha)]*sqrt(variance.bootstrap)
-
-ci_left.stdzd <- exp.maximLikelihoodEst.lambda.estimated-ahat.stdzd_right
-ci_right.stdzd <- exp.maximLikelihoodEst.lambda.estimated-ahat.stdzd_left
 ```
 
 ```{r echo = F}
-cat(sprintf("left value: %f\nright value: %f",ci_left.stdzd,ci_right.stdzd))
+cat(sprintf("left value: %f\nright value: %f",studentized.ci.values$ci_left,studentized.ci.values$ci_right))
 ```
 
-```{r bootstrap-stdzdz, warning=F, echo=F,fig.cap="Density estimation of the pivot statistic $z$", env="figure"}
-confidence_interval_plot(sample.bootstraps.phi, ci_left.stdzd, ci_right.stdzd)
+```{r bootstrap-stdzdz, warning=F, echo=F,fig.cap="Studentized confidence intervals of 0.025 in the estimate pdf of the estimator $\\lambda$", env="figure"}
+confidence_interval_plot(sample.bootstraps.phi, studentized.ci.values$ci_left, studentized.ci.values$ci_right)
 ```
 
 ## Discussion
@@ -596,4 +621,69 @@ Discuss the results of items (c) and (d). Choose $\alpha = 0.025$ as the signifi
 
 ____
 
-The values in these confidence intervals are pretty 
+The values in these confidence intervals are pretty close, with the estimated value obtain in \@ref(sub:normal-mle-var).
+From [@cmu-bootstrap], the studentized-bootstrap can be more accurate when comparing to the bootstrap, but in our simulation this was not evident:
+
+- range of bootstrap: `r round(boot_cis$ci_right - boot_cis$ci_left,3) `
+- range of studentized-bootstrap: `r round(studentized.ci.values$ci_right - studentized.ci.values$ci_left,3)`
+
+But by doing more simulations to assess this statement we can check this:
+
+```{r eval = F}
+set.seed(100)
+
+ranges <- sapply(1:100,function(idx){
+  variance.bootstrap <- bootstrap.var(sample,R)
+  boot_cis <- boot.ci(sample, R, 0.025, exp.maximLikelihoodEst.lambda.estimated, variance.bootstrap)
+  std_cis <- studentized.ci(sample, R, 0.025, exp.maximLikelihoodEst.lambda.estimated, variance.bootstrap)
+  
+  return(
+    list(
+      range.boot = boot_cis$ci_right - boot_cis$ci_left,
+      range.boot.t = std_cis$ci_right - std_cis$ci_left
+    )
+  )
+})
+
+ranges.unlist <- unlist(ranges)
+```
+
+```{r include = F, eval = F}
+ranges.unlist <- unlist(ranges)
+ranges.unlist.df <- data.frame(
+  ranges = ranges.unlist
+)
+write.table(ranges.unlist.df, file.path(this.path,"ranges.unlist.df"))
+```
+
+```{r include = F}
+ttt <- read.table(file.path(this.path,"ranges.unlist.df"))
+ranges.unlist <- ttt$ranges
+```
+
+
+```{r}
+boot.mean <- mean(ranges.unlist[seq(1,length(ranges.unlist),2)])
+boot.t.mean <- mean(ranges.unlist[seq(2,length(ranges.unlist),2)])
+```
+
+```{r include = F}
+boot_boot.t_dists <- data.frame(
+  boot.mean = round(boot.mean,2),
+  boot.t.mean = round(boot.t.mean,2)
+)
+```
+
+```{r echo=F}
+kableExtra::kable(boot_boot.t_dists, knitr:::pandoc_to(), booktabs = T) %>% kableExtra::kable_styling(position = "center")
+```
+
+
+Given the results, we can see that, in average, the Studentized-Bootstrap can indeed be more accurate than the Boostrap, but by a small value.
+This small value in difference can be because of two things:
+
+1. Due to the small size of the sample (maybe they are not representative, which would inject a lot of uncertainty)
+2. Due to the characteristics of the data. The Studentized Boostrap is not always more accurate than the Boostrap, in spite of there are cases where it is.
+
+
+
