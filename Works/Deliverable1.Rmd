@@ -12,9 +12,9 @@ library(tinytex)
 
 # Trabalho 1
 
-## Exercício 1
+## Exerc?cio 1
 
-1. Considere que uma variável continua $X$ com a seguinte função de densidade:
+1. Considere que uma variÃ¡vel continua $X$ com a seguinte funÃ§Ã£o de densidade:
 $$
 f(x) = \left\{
 \begin{array}{ll}
@@ -24,8 +24,8 @@ f(x) = \left\{
 \right. 
 $$
 
-Agora considerando a variavel aliatória $Y = g(X)$, em que $g(x) = log(x^2 + 4)$.
-Estime o valor $P(1.3 < Y < 1.5)$ usando o método de monte carlo e estime o valor do desvio padrão da estimativa
+Agora considerando a variavel aliatÃ³ria $Y = g(X)$, em que $g(x) = log(x^2 + 4)$.
+Estime o valor $P(1.3 < Y < 1.5)$ usando o mÃ©todo de monte carlo e estime o valor do desvio padrÃ£o da estimativa
 
 _____
 
@@ -35,8 +35,8 @@ $$
 $$
 D(g(x))=D(log(x^2+4))=[min(log(x^2+4),+ \infty[ \quad , \quad min(log(x^2+4))=log(4)=1.386294>1.3
 $$
-Onde $D(g(x))$ é o dominio de $g(x)$.
-Uma vez que $D(g(x))$ está definido no intervalo $[min(log(x^2+4),+ \infty[$ afimar o seguinte:
+Onde $D(g(x))$ Ã© o dominio de $g(x)$.
+Uma vez que $D(g(x))$ estÃ¡ definido no intervalo $[min(log(x^2+4),+ \infty[$ afimar o seguinte:
 
 $$
 P(1.3<g(x)<log(4))=0 \quad \implies \quad P(1.3<g(x)<1.5)\equiv P(log(4)<g(X)<1.5)
@@ -51,14 +51,14 @@ $$
 P(log(4) < log(x^2 + 4) < 1.5) \quad = \quad P(4 < x^2 + 4 < e^{1.5}) \quad = \quad P(0 < x^2  < e^{1.5}-4) \quad = \quad P(0 < x  < \sqrt{e^{1.5}-4})
 $$ 
 
-Agora, sabemos que a probabilidade que queriamos calcular pode ser obtida através do seguinte integral:
+Agora, sabemos que a probabilidade que queriamos calcular pode ser obtida atravÃ©s do seguinte integral:
 
 $$ 
   \int_{0}^{\sqrt{e^{1.5}-4}} \frac{4}{3}(x^3 + x) dx
 $$ 
-O qual puderá ser escrito com a seguinte mudança de variável:
+O qual puderÃ¡ ser escrito com a seguinte mudanÃ§a de variÃ¡vel:
 
-### Mudança de Variável
+### MudanÃ§a de variÃ¡vel
 $$
 z(x)=xc \quad ,\quad z(\sqrt{e^{1.5}-4})=1 \quad \implies c=\frac{1}{\sqrt{e^{1.5}-4}} 
 $$
@@ -71,9 +71,9 @@ No que resulta no seguinte integral:
 $$
 \int_{0}^{\sqrt{e^{1.5}-4}} \frac{4}{3}(x^3 + x)dx \quad \equiv \quad \frac{4}{3}\int_{0}^{1} ((z\sqrt{e^{1.5}-4})^3 + z\sqrt{e^{1.5}-4}).\sqrt{e^{1.5}-4} \;dz \equiv \frac{4}{3}(e^{1.5}-4)\int_{0}^{1} (z^3(e^{1.5}-4) + z).1 \; dx
 $$
-Onde pudemos usar o método de monte carlo para estimar 
+Onde pudemos usar o mÃ©todo de monte carlo para estimar 
 $$\int_{0}^{1} (z^3(e^{1.5}-1) + z).1 \; dx$$
-, assumindo que $z$ segue uma distribuição $U(0,1)$.
+, assumindo que $z$ segue uma distribuiÃ§Ã£o $U(0,1)$.
 $$
 \int_{0}^{1} (z^3(e^{1.5}-4) + z).1 \; dx\quad \approx \quad \hat{\theta} =\frac{\sum_{i=1}^{n}(z_i^3.(e^{1.5}-4)+z_i)}{n}
 $$
@@ -95,7 +95,7 @@ Assim sendo:
 
 $P(1.3<x<1.5)\quad=\quad$ `r prob_value` 
 
-### Cálculo do desvio padrão do estimador da probabilidade
+### CÃ¡lculo do desvio padrÃ£o do estimador da probabilidade
 
 $$
 var(P(1.3<Y<1.5)) \quad = \quad \left(\frac{4}{3}(e^{1.5}-4)\right)^2.var(\theta)
@@ -122,18 +122,18 @@ knitr::kable(df)
 
 Sendo:
   
-  $$E(X)=\int_D \mathrm{x.f(x)}\,\mathrm{d}x$$, onde $\mathrm{X}$ é uma variável aletória e $\mathrm{f(x)}$ a sua função densidade de probabilidade.
+  $$E(X)=\int_D \mathrm{x.f(x)}\,\mathrm{d}x$$, onde $\mathrm{X}$ Ã© uma variÃ¡vel aletÃ³ria e $\mathrm{f(x)}$ a sua funÃ§Ã£o densidade de probabilidade.
   
 Temos:
   
 $$\int_0^\infty\int_0^\infty\mathrm{e}^{x+y}.\frac{2}{\sqrt{2\pi}}.\mathrm{e}^{\frac{-x^{2}}{2}}.\frac{2}{\sqrt{2\pi}}.\mathrm{e}^{\frac{-y^{2}}{2}}\,\mathrm{d}x\mathrm{d}y \quad = \quad \frac{2}{\pi}\int_0^\infty\int_0^\infty\mathrm{e}^{x}.\mathrm{e}^{\frac{-x^{2}}{2}}.\mathrm{e}^{y}.\mathrm{e}^{\frac{-y^{2}}{2}}\,\mathrm{d}x\mathrm{d}y$$
 
-Fazendo as seguintes mudanças de variável:
+Fazendo as seguintes mudanÃ§as de variÃ¡vel:
 
   $$\alpha=\mathrm{e}^{-x}\implies x=-log(\alpha)$$
   $$\beta=\mathrm{e}^{-y}\implies y=-log(\beta)$$
 
-Ficamos com os seguintes limites de integração para $\alpha$:
+Ficamos com os seguintes limites de integraÃ§Ã£o para $\alpha$:
   
   $$\displaystyle\lim_{x \to \infty}\mathrm{e}^{-x} = 0$$
   $$\displaystyle\lim_{x \to 0}\mathrm{e}^{-x} = 1$$
@@ -143,7 +143,7 @@ e para $\beta$:
   $$\displaystyle\lim_{x \to \infty} \mathrm{e}^{-y} = 0$$
   $$\displaystyle\lim_{x \to 0} \mathrm{e}^{-y} = 1$$
   
-Substituindo na equação, temos:
+Substituindo na equaÃ§Ã£o, temos:
 
 $$\frac{2}{\pi}\int_1^0\int_1^0\mathrm{e}^{-log(\alpha)}.\mathrm{e}^{\frac{-(-log^{2}(\alpha))}{2}}.(-\frac{1}{\alpha}).\mathrm{e}^{-log(\beta)}.\mathrm{e}^{\frac{-(-log^{2}(\beta))}{2}}.(-\frac{1}{\beta})\mathrm{d}\alpha\mathrm{d}\beta$$
   $$ =\frac{2}{\pi}.(-\int_0^1\mathrm{e}^{-log(\alpha)}.\mathrm{e}^{\frac{-(-log^{2}(\alpha))}{2}}.\frac{1}{\alpha}\mathrm{d}\alpha).(-\int_0^1\mathrm{e}^{-log(\beta)}.\mathrm{e}^{\frac{-(-log^{2}(\beta))}{2}}.\frac{1}{\beta}\mathrm{d}\beta)$$
@@ -169,7 +169,7 @@ e,
 
   $$f_1(\alpha),f_2(\beta)\geq0$$
   
-Estamos em condições de aplicar Monte Carlo:
+Estamos em condiÃ§Ãµes de aplicar Monte Carlo:
 
   $$
   \begin{cases}
@@ -178,7 +178,7 @@ Estamos em condições de aplicar Monte Carlo:
     \end{cases}
   $$
   
-Se tivermos uma amostra aleatória $x_1,...,x_n$ da variavél aleatória $X$ com densidade $f$, um estimador $\theta$ é:\newline
+Se tivermos uma amostra aleatÃ³ria $x_1,...,x_n$ da variavÃ©l aleatÃ³ria $X$ com densidade $f$, um estimador $\theta$ Ã©:\newline
 
   $$
   \begin{cases}
@@ -192,11 +192,11 @@ Finalmente:
 
   $\hat{E(e^{x+y})}=\hat{\theta}=\frac{2}{\pi}.\hat{\theta_1.}\hat{\theta_2}$\newline
   
-A variância de $\hat\theta$ será:\newline
+A variÃ¢ncia de $\hat\theta$ serÃ¡:\newline
 
   $v=Var(\frac{2}{\pi}.\hat{\theta_1.}\hat{\theta_2})=\frac{4}{\pi^2}.Var(\hat{\theta_1}).Var(\hat{\theta_2})$\newline
 
-Aplicando o método de Monte Carlo, ficamos com:\newline
+Aplicando o mÃ©todo de Monte Carlo, ficamos com:\newline
   
   $$
   \begin{cases}
@@ -205,16 +205,16 @@ Aplicando o método de Monte Carlo, ficamos com:\newline
     \end{cases}
   $$
   
-Substituindo na equação inicial:\newline
+Substituindo na equaÃ§Ã£o inicial:\newline
 
   $$
 \hat v=\frac{4}{\pi^2}.\sum\limits_{i=1}^n \frac{(g_1(x_i)-\theta)^2}{n}.\sum\limits_{i=1}^n \frac{(g_2(y_i)-\theta)^2}{n}
 $$
   
 
-### Implementação do método:
+### ImplementaÃ§Ã£o do mÃ©todo:
 
-#### Determinação do estimador e do estimador da variancia
+#### DeterminaÃ§Ã£o do estimador e do estimador da variÃ¢ncia
 
 ```{r var}
 set.seed(1)
@@ -248,7 +248,7 @@ $$
  f(x) = \frac{2}{sqrt(2\pi)}e^{-\frac{x^2}{2}} \quad , 0 < x < +\infty
 $$
 
-precisamos de estimar o parâmetro $\theta$ com o Método de Monte Carlo utilizando uma variável que não seja Uniforme, onde o parâmetro $\theta$ é definido como:
+precisamos de estimar o par?metro $\theta$ com o mÃ©todo de Monte Carlo utilizando uma variÃ¡vel que nÃ£o seja Uniforme, onde o parÃ¢metro $\theta$ Ã© definido como:
 
 
 $$
@@ -265,11 +265,11 @@ $$
 = \int_{0}^{+\infty} e^x \frac{2}{\sqrt{2\pi}} e^{-\frac{x^2}{2}} dx \times \int_{0}^{+\infty} e^y \frac{2}{\sqrt{2\pi}} e^{-\frac{y^2}{2}} dy
 $$ 
 
-Este integral não as condições para o Método de Monte Carlo ser aplicado, e portanto é necessário trabalhar o integral de maneira a que seja possível aplicar o método.
+Este integral n?o as condiÃ§Ãµes para o mÃ©todo de Monte Carlo ser aplicado, e portanto Ã© necessÃ¡rio trabalhar o integral de maneira a que seja possÃ­vel aplicar o mÃ©todo.
 
-### Mudança de variável
+### MudanÃ§a de variÃ¡vel
 
-Ao aplicar a seguinte mudança de variável:
+Ao aplicar a seguinte mudanÃ§a de variÃ¡vel:
 
 $$
 x = \varphi(t) = \sqrt{t}
@@ -302,10 +302,10 @@ $$
 \int_{0}^{+\infty} e^{\sqrt{t_x}} \frac{2}{\sqrt{2\pi}} e^{-\frac{1}{2}t_x} \frac{1}{2}t_x^{-\frac{1}{2}} dt_x \times \int_{0}^{+\infty} e^{\sqrt{t_y}} \frac{2}{\sqrt{2\pi}} e^{-\frac{1}{2}t_y} \frac{1}{2}t_y^{-\frac{1}{2}} dt_y
 $$
 
-Re-ordenando a equação, estamos agora em condições de aplicar o Método de Monte Carlo uma vez que o integral é definido pela multiplicação de:
+Re-ordenando a equaÃ§Ã£o, estamos agora em condiÃ§Ãµes de aplicar o mÃ©todo de Monte Carlo uma vez que o integral Ã© definido pela multiplicaÃ§Ã£o de:
 
 1. uma p.d.f. $f(x)$ conhecida 
-2. uma outra função $g(x)$
+2. uma outra funÃ§Ã£o $g(x)$
 
 $$
 \int_{0}^{+\infty} e^{\sqrt{t_x}} \frac{2}{\sqrt{2\pi}}  t_x^{-\frac{1}{2}} \frac{1}{2}e^{-\frac{1}{2}t_x}  dt_x \times \int_{0}^{+\infty} e^{\sqrt{t_y}} \frac{2}{\sqrt{2\pi}}  t_y^{-\frac{1}{2}} \frac{1}{2} e^{-\frac{1}{2}t_y}  dt_y
@@ -317,32 +317,32 @@ $$
 g(x) = e^{\sqrt{x}} \frac{2}{\sqrt{2\pi}}  x^{-\frac{1}{2}} \quad \text{and} \quad f(x) = \frac{1}{2} e^{-\frac{1}{2}x}
 $$
 
-onde $f(x)$ é a função distribuição densidade de uma variável Exponencial com $\lambda = \frac{1}{2}$:
+onde $f(x)$ Ã© a funÃ§Ã£o distribuiÃ§Ã£o densidade de uma variÃ¡vel Exponencial com $\lambda = \frac{1}{2}$:
 
 $$
 X \sim	Exp( \frac{1}{2}) 
 $$
 
-Portanto, é agora necessário gerar amostras aleatórias de $X \sim	Exp(\frac{1}{2})$ 
+Portanto, Ã© agora necessÃ¡rio gerar amostras aleatÃ³rias de $X \sim	Exp(\frac{1}{2})$ 
 
-### Gerar uma variável com distribuição Exponencial utilizando o Método da Transformação Inversa
+### Gerar uma variÃ¡vel com distribuiÃ§Ã£o Exponencial utilizando o mÃ©todo da TransformaÃ§Ã£o Inversa
 
 
-Comecemos com a função distribuição cumulativa de uma variável Exponencial, que é definida por:
+Comecemos com a funÃ§Ã£o distribui??o cumulativa de uma variÃ¡vel Exponencial, que Ã© definida por:
 $$
 F(X) = 1 - e^{-\lambda x}, \quad x \in \mathbb{R}
 $$
 
-Tendo em consideração que o resultado de $F(X)$ é um número real entre 0 e 1, e que:
+Tendo em consideraÃ§Ã£o que o resultado de $F(X)$ Ã© um nÃºmero real entre 0 e 1, e que:
 
-1. $F(X)$ é uma função monótona não decrescente 
-2. $F(X)$ é uma função contínua
+1. $F(X)$ ? uma funÃ§Ã£o monÃ³tona nÃ£o decrescente 
+2. $F(X)$ ? uma funÃ§Ã£o cont?nua
 
-é sabido que $F(X)$  é invertível. 
+? sabido que $F(X)$  ? invert?vel. 
 
 
 
-### Implementação do método
+### ImplementaÃ§Ã£o do mÃ©todo
 
 ```{r}
 set.seed(1)
@@ -399,9 +399,9 @@ $\hat{\theta_c}\quad=\quad \hat{\theta}-\beta.(c-\mu)$
 $E(C)\quad=\quad\mu$
 $var(\hat{\theta_c}) = var(\hat{\theta})+\beta^2.var(C)-2\beta cov(\hat{\theta},C)$
 
-Queremos minimazar a variância, minimizando a variável $\beta$:
+Queremos minimazar a variÃ¢ncia, minimizando a variÃ¡vel $\beta$:
 para tal derivamos $var(\hat{\theta_c})$ em ordem a $\beta$
-o que resulta na expressão:
+o que resulta na expressÃ£o:
 $var(\hat{\theta_c})'=2\beta var(C) - 2cov(\hat{\theta},C)$
 
 Com $var(\hat{\theta_c})'=0$ iremos obter os extremos.
@@ -426,7 +426,7 @@ $$
 $$
 = \frac{1}{n^2}\sum_{i=1}^n cov \left( g(U_i,V_i), U_i,V_i \right) -\sum_{i=1}^n\sum_{j=1}^ncov \left( g(U_i,V_i), U_jV_j \right)=
 $$
-Como os indices $i \neq j$ então$g(U_i,V_i)$ será independente de $U_i V_i$ e a sua covariância será Zero.
+Como os indices $i \neq j$ entÃ£o$g(U_i,V_i)$ serÃ¡ independente de $U_i V_i$ e a sua covariÃ¢ncia serÃ¡ Zero.
 
 $$
 = \frac{1}{n^2}\sum_{i=1}^n cov \left( g(U_i,V_i), U_i,V_i \right)-0=
@@ -439,7 +439,7 @@ $$
 $$
 E(g(U,V))UV)= \int_0^{1}\int_0^{1}uv.g(u,v)\:du\:dv 
 $$
-que será estimado em r pelo método de monte carlo
+que serÃ¡ estimado em r pelo mÃ©todo de monte carlo
 
 ```{r}
 kk=1

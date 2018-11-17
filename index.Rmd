@@ -25,5 +25,8 @@ fig_basePath = "Figures/"
 ```{r child="Works/Deliverable1.Rmd"}
 ```
 
+```{r child="Works/work2/Deliverable2.Rmd"}
+```
+
 <!--chapter:end:index.Rmd-->
 

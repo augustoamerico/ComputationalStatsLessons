@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Computational Stats</title>
+  <meta name="description" content="The captain’s log of Computational Stats">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Computational Stats" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="The captain’s log of Computational Stats" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Computational Stats" />
+  
+  <meta name="twitter:description" content="The captain’s log of Computational Stats" />
+  
+
+<meta name="author" content="Tiago dos Santos">
+
+
+<meta name="date" content="2018-11-17">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="deliverables.html">
+<link rel="next" href="problem-1.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.8.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.39.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.39.2/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Lesson 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#start-by-creating-a-vector"><i class="fa fa-check"></i><b>1.1</b> Start by creating a vector</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#now-a-matrix"><i class="fa fa-check"></i><b>1.2</b> Now a Matrix!</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#dataframes"><i class="fa fa-check"></i><b>1.3</b> DataFrames</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#reading-a-tab-separated-file"><i class="fa fa-check"></i><b>1.4</b> Reading a Tab Separated File</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#generating-data"><i class="fa fa-check"></i><b>1.5</b> Generating data</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#getting-insights"><i class="fa fa-check"></i><b>1.6</b> Getting insights</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#lists"><i class="fa fa-check"></i><b>1.7</b> Lists</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#functions"><i class="fa fa-check"></i><b>1.8</b> Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lessons-2.html"><a href="lessons-2.html"><i class="fa fa-check"></i><b>2</b> Lessons 2</a><ul>
+<li class="chapter" data-level="2.1" data-path="lessons-2.html"><a href="lessons-2.html#random-variables-and-vectors"><i class="fa fa-check"></i><b>2.1</b> Random Variables and Vectors</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="lessons-2.html"><a href="lessons-2.html#elements-of-probability"><i class="fa fa-check"></i><b>2.1.1</b> Elements of probability</a></li>
+<li class="chapter" data-level="2.1.2" data-path="lessons-2.html"><a href="lessons-2.html#expected-value"><i class="fa fa-check"></i><b>2.1.2</b> Expected value</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lesson-3.html"><a href="lesson-3.html"><i class="fa fa-check"></i><b>3</b> Lesson 3</a><ul>
+<li class="chapter" data-level="3.0.1" data-path="lesson-3.html"><a href="lesson-3.html#estimating-pi"><i class="fa fa-check"></i><b>3.0.1</b> Estimating pi</a></li>
+<li class="chapter" data-level="3.1" data-path="lesson-3.html"><a href="lesson-3.html#hypothesis-testing"><i class="fa fa-check"></i><b>3.1</b> Hypothesis Testing</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="lesson-3.html"><a href="lesson-3.html#types-of-error-while-infering-through-hypothesis-testing"><i class="fa fa-check"></i><b>3.1.1</b> Types of error while infering through hypothesis testing</a></li>
+<li class="chapter" data-level="3.1.2" data-path="lesson-3.html"><a href="lesson-3.html#defining-alpha-to-reduce-a-type-of-error"><i class="fa fa-check"></i><b>3.1.2</b> Defining <span class="math inline">\(\alpha\)</span> to reduce a type of error</a></li>
+<li class="chapter" data-level="3.1.3" data-path="lesson-3.html"><a href="lesson-3.html#procedure-to-make-a-test-using-p-value"><i class="fa fa-check"></i><b>3.1.3</b> Procedure to make a test using <span class="math inline">\(p-value\)</span></a></li>
+<li class="chapter" data-level="3.1.4" data-path="lesson-3.html"><a href="lesson-3.html#estimating-test-stats"><i class="fa fa-check"></i><b>3.1.4</b> Estimating test stats</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="deliverables.html"><a href="deliverables.html"><i class="fa fa-check"></i><b>4</b> Deliverables</a></li>
+<li class="chapter" data-level="5" data-path="trabalho-1.html"><a href="trabalho-1.html"><i class="fa fa-check"></i><b>5</b> Trabalho 1</a><ul>
+<li class="chapter" data-level="5.1" data-path="trabalho-1.html"><a href="trabalho-1.html#exerccio-1"><i class="fa fa-check"></i><b>5.1</b> Exerc?cio 1</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="trabalho-1.html"><a href="trabalho-1.html#mudanca-de-variavel"><i class="fa fa-check"></i><b>5.1.1</b> Mudança de variável</a></li>
+<li class="chapter" data-level="5.1.2" data-path="trabalho-1.html"><a href="trabalho-1.html#calculo-do-desvio-padrao-do-estimador-da-probabilidade"><i class="fa fa-check"></i><b>5.1.2</b> Cálculo do desvio padrão do estimador da probabilidade</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="trabalho-1.html"><a href="trabalho-1.html#exercise-2"><i class="fa fa-check"></i><b>5.2</b> Exercise 2</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="trabalho-1.html"><a href="trabalho-1.html#section"><i class="fa fa-check"></i><b>5.2.1</b> 2.1</a></li>
+<li class="chapter" data-level="5.2.2" data-path="trabalho-1.html"><a href="trabalho-1.html#implementacao-do-metodo"><i class="fa fa-check"></i><b>5.2.2</b> Implementação do método:</a></li>
+<li class="chapter" data-level="5.2.3" data-path="trabalho-1.html"><a href="trabalho-1.html#section-1"><i class="fa fa-check"></i><b>5.2.3</b> 2.2</a></li>
+<li class="chapter" data-level="5.2.4" data-path="trabalho-1.html"><a href="trabalho-1.html#trabalhar-o-estimador"><i class="fa fa-check"></i><b>5.2.4</b> Trabalhar o estimador</a></li>
+<li class="chapter" data-level="5.2.5" data-path="trabalho-1.html"><a href="trabalho-1.html#mudanca-de-variavel-1"><i class="fa fa-check"></i><b>5.2.5</b> Mudança de variável</a></li>
+<li class="chapter" data-level="5.2.6" data-path="trabalho-1.html"><a href="trabalho-1.html#gerar-uma-variavel-com-distribuicao-exponencial-utilizando-o-metodo-da-transformacao-inversa"><i class="fa fa-check"></i><b>5.2.6</b> Gerar uma variável com distribuição Exponencial utilizando o método da Transformação Inversa</a></li>
+<li class="chapter" data-level="5.2.7" data-path="trabalho-1.html"><a href="trabalho-1.html#implementacao-do-metodo-1"><i class="fa fa-check"></i><b>5.2.7</b> Implementação do método</a></li>
+<li class="chapter" data-level="5.2.8" data-path="trabalho-1.html"><a href="trabalho-1.html#section-2"><i class="fa fa-check"></i><b>5.2.8</b> 2.3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="problem-1.html"><a href="problem-1.html"><i class="fa fa-check"></i><b>6</b> Problem 1</a><ul>
+<li class="chapter" data-level="6.1" data-path="problem-1.html"><a href="problem-1.html#sub:normal-mle-var"><i class="fa fa-check"></i><b>6.1</b> Normal variance MLE</a></li>
+<li class="chapter" data-level="6.2" data-path="problem-1.html"><a href="problem-1.html#jackknife-bias-and-variance"><i class="fa fa-check"></i><b>6.2</b> Jackknife bias and variance</a></li>
+<li class="chapter" data-level="6.3" data-path="problem-1.html"><a href="problem-1.html#kolmogorov-smirnov-test"><i class="fa fa-check"></i><b>6.3</b> Kolmogorov-Smirnov Test</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="problem-2.html"><a href="problem-2.html"><i class="fa fa-check"></i><b>7</b> Problem 2</a><ul>
+<li class="chapter" data-level="7.1" data-path="problem-2.html"><a href="problem-2.html#exponential-parameter-mle"><i class="fa fa-check"></i><b>7.1</b> Exponential parameter MLE</a></li>
+<li class="chapter" data-level="7.2" data-path="problem-2.html"><a href="problem-2.html#bootstrap-bias-and-variance"><i class="fa fa-check"></i><b>7.2</b> Bootstrap bias and variance</a></li>
+<li class="chapter" data-level="7.3" data-path="problem-2.html"><a href="problem-2.html#bootstrap-confidence-interval"><i class="fa fa-check"></i><b>7.3</b> Bootstrap confidence interval</a></li>
+<li class="chapter" data-level="7.4" data-path="problem-2.html"><a href="problem-2.html#studentized-bootstrap-confidence-interval"><i class="fa fa-check"></i><b>7.4</b> Studentized-Bootstrap confidence interval</a></li>
+<li class="chapter" data-level="7.5" data-path="problem-2.html"><a href="problem-2.html#discussion"><i class="fa fa-check"></i><b>7.5</b> Discussion</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Computational Stats</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="trabalho-1" class="section level1">
+<h1><span class="header-section-number">5</span> Trabalho 1</h1>
+<div id="exerccio-1" class="section level2">
+<h2><span class="header-section-number">5.1</span> Exerc?cio 1</h2>
+<ol style="list-style-type: decimal">
+<li>Considere que uma variável continua <span class="math inline">\(X\)</span> com a seguinte função de densidade: <span class="math display">\[
+f(x) = \left\{
+\begin{array}{ll}
+ \frac{4}{3}(x^3 + x) \quad \qquad 0 &lt; x &lt; 1\\
+ 0, \qquad \qquad \qquad\text{for all others } x \text{ values}\\
+\end{array} 
+\right. 
+\]</span></li>
+</ol>
+<p>Agora considerando a variavel aliatória <span class="math inline">\(Y = g(X)\)</span>, em que <span class="math inline">\(g(x) = log(x^2 + 4)\)</span>. Estime o valor <span class="math inline">\(P(1.3 &lt; Y &lt; 1.5)\)</span> usando o método de monte carlo e estime o valor do desvio padrão da estimativa</p>
+<hr />
+<p><span class="math display">\[
+P(1.3 &lt; Y &lt; 1.5) \quad = \quad P(1.3 &lt; g(x) &lt; 1.5) 
+\]</span> <span class="math display">\[
+D(g(x))=D(log(x^2+4))=[min(log(x^2+4),+ \infty[ \quad , \quad min(log(x^2+4))=log(4)=1.386294&gt;1.3
+\]</span> Onde <span class="math inline">\(D(g(x))\)</span> é o dominio de <span class="math inline">\(g(x)\)</span>. Uma vez que <span class="math inline">\(D(g(x))\)</span> está definido no intervalo <span class="math inline">\([min(log(x^2+4),+ \infty[\)</span> afimar o seguinte:</p>
+<p><span class="math display">\[
+P(1.3&lt;g(x)&lt;log(4))=0 \quad \implies \quad P(1.3&lt;g(x)&lt;1.5)\equiv P(log(4)&lt;g(X)&lt;1.5)
+\]</span></p>
+<p>Que se pode desenvolver :</p>
+<p><span class="math display">\[
+P(log(4) &lt; log(x^2 + 4) &lt; 1.5) \quad = \quad P(4 &lt; x^2 + 4 &lt; e^{1.5}) \quad = \quad P(0 &lt; x^2  &lt; e^{1.5}-4) \quad = \quad P(0 &lt; x  &lt; \sqrt{e^{1.5}-4})
+\]</span></p>
+<p>Agora, sabemos que a probabilidade que queriamos calcular pode ser obtida através do seguinte integral:</p>
+<p><span class="math display">\[ 
+  \int_{0}^{\sqrt{e^{1.5}-4}} \frac{4}{3}(x^3 + x) dx
+\]</span> O qual puderá ser escrito com a seguinte mudança de variável:</p>
+<div id="mudanca-de-variavel" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Mudança de variável</h3>
+<p><span class="math display">\[
+z(x)=xc \quad ,\quad z(\sqrt{e^{1.5}-4})=1 \quad \implies c=\frac{1}{\sqrt{e^{1.5}-4}} 
+\]</span> <span class="math display">\[
+x=z\sqrt{e^{1.5}-4} \quad \implies \quad x&#39;=\sqrt{e^{1.5}-4}
+\]</span></p>
+<p>No que resulta no seguinte integral:</p>
+<p><span class="math display">\[
+\int_{0}^{\sqrt{e^{1.5}-4}} \frac{4}{3}(x^3 + x)dx \quad \equiv \quad \frac{4}{3}\int_{0}^{1} ((z\sqrt{e^{1.5}-4})^3 + z\sqrt{e^{1.5}-4}).\sqrt{e^{1.5}-4} \;dz \equiv \frac{4}{3}(e^{1.5}-4)\int_{0}^{1} (z^3(e^{1.5}-4) + z).1 \; dx
+\]</span> Onde pudemos usar o método de monte carlo para estimar <span class="math display">\[\int_{0}^{1} (z^3(e^{1.5}-1) + z).1 \; dx\]</span> , assumindo que <span class="math inline">\(z\)</span> segue uma distribuição <span class="math inline">\(U(0,1)\)</span>. <span class="math display">\[
+\int_{0}^{1} (z^3(e^{1.5}-4) + z).1 \; dx\quad \approx \quad \hat{\theta} =\frac{\sum_{i=1}^{n}(z_i^3.(e^{1.5}-4)+z_i)}{n}
+\]</span></p>
+<p>Calculo do estimador <span class="math inline">\(\hat{\theta}\)</span> do valor esperado do integral anterior.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">int_func &lt;-<span class="st"> </span><span class="cf">function</span>(z){
+  res=(z<span class="op">^</span><span class="dv">3</span>)<span class="op">*</span>(<span class="kw">exp</span>(<span class="fl">1.5</span>)<span class="op">-</span><span class="dv">4</span>)<span class="op">+</span>z
+}
+
+<span class="co">#z follows an uniform</span>
+
+sample &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1000</span>)
+int_est &lt;-<span class="st"> </span><span class="kw">mean</span>(<span class="kw">int_func</span>(sample))
+prob_value &lt;-<span class="st"> </span>(<span class="dv">4</span><span class="op">/</span><span class="dv">3</span>)<span class="op">*</span>(<span class="kw">exp</span>(<span class="fl">1.5</span>)<span class="op">-</span><span class="dv">4</span>)<span class="op">*</span>int_est</code></pre></div>
+<p>Assim sendo:</p>
+<p><span class="math inline">\(P(1.3&lt;x&lt;1.5)\quad=\quad\)</span> 0.3937988</p>
+</div>
+<div id="calculo-do-desvio-padrao-do-estimador-da-probabilidade" class="section level3">
+<h3><span class="header-section-number">5.1.2</span> Cálculo do desvio padrão do estimador da probabilidade</h3>
+<p><span class="math display">\[
+var(P(1.3&lt;Y&lt;1.5)) \quad = \quad \left(\frac{4}{3}(e^{1.5}-4)\right)^2.var(\theta)
+\]</span></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">varEstimator &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>(<span class="kw">length</span>(sample)<span class="op">^</span><span class="dv">2</span>))<span class="op">*</span><span class="kw">sum</span>(((<span class="dv">4</span><span class="op">/</span><span class="dv">3</span>)<span class="op">*</span>(<span class="kw">exp</span>(<span class="fl">1.5</span>)<span class="op">-</span><span class="dv">4</span>)<span class="op">*</span><span class="kw">int_func</span>(sample)<span class="op">-</span>prob_value)<span class="op">^</span><span class="dv">2</span>)
+df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(
+  <span class="dt">probEstimated =</span> prob_value,
+  <span class="dt">stdMC =</span> <span class="kw">sqrt</span>(varEstimator)
+)
+
+knitr<span class="op">::</span><span class="kw">kable</span>(df)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">probEstimated</th>
+<th align="right">stdMC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0.3937988</td>
+<td align="right">0.0085771</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="exercise-2" class="section level2">
+<h2><span class="header-section-number">5.2</span> Exercise 2</h2>
+<div id="section" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> 2.1</h3>
+<p><span class="math display">\[E(e^{x+y})=E(e^{x}+e^{y})\]</span></p>
+<p>Sendo:</p>
+<p><span class="math display">\[E(X)=\int_D \mathrm{x.f(x)}\,\mathrm{d}x\]</span>, onde <span class="math inline">\(\mathrm{X}\)</span> é uma variável aletória e <span class="math inline">\(\mathrm{f(x)}\)</span> a sua função densidade de probabilidade.</p>
+<p>Temos:</p>
+<p><span class="math display">\[\int_0^\infty\int_0^\infty\mathrm{e}^{x+y}.\frac{2}{\sqrt{2\pi}}.\mathrm{e}^{\frac{-x^{2}}{2}}.\frac{2}{\sqrt{2\pi}}.\mathrm{e}^{\frac{-y^{2}}{2}}\,\mathrm{d}x\mathrm{d}y \quad = \quad \frac{2}{\pi}\int_0^\infty\int_0^\infty\mathrm{e}^{x}.\mathrm{e}^{\frac{-x^{2}}{2}}.\mathrm{e}^{y}.\mathrm{e}^{\frac{-y^{2}}{2}}\,\mathrm{d}x\mathrm{d}y\]</span></p>
+<p>Fazendo as seguintes mudanças de variável:</p>
+<p><span class="math display">\[\alpha=\mathrm{e}^{-x}\implies x=-log(\alpha)\]</span> <span class="math display">\[\beta=\mathrm{e}^{-y}\implies y=-log(\beta)\]</span></p>
+<p>Ficamos com os seguintes limites de integração para <span class="math inline">\(\alpha\)</span>:</p>
+<p><span class="math display">\[\displaystyle\lim_{x \to \infty}\mathrm{e}^{-x} = 0\]</span> <span class="math display">\[\displaystyle\lim_{x \to 0}\mathrm{e}^{-x} = 1\]</span></p>
+<p>e para <span class="math inline">\(\beta\)</span>:</p>
+<p><span class="math display">\[\displaystyle\lim_{x \to \infty} \mathrm{e}^{-y} = 0\]</span> <span class="math display">\[\displaystyle\lim_{x \to 0} \mathrm{e}^{-y} = 1\]</span></p>
+<p>Substituindo na equação, temos:</p>
+<p><span class="math display">\[\frac{2}{\pi}\int_1^0\int_1^0\mathrm{e}^{-log(\alpha)}.\mathrm{e}^{\frac{-(-log^{2}(\alpha))}{2}}.(-\frac{1}{\alpha}).\mathrm{e}^{-log(\beta)}.\mathrm{e}^{\frac{-(-log^{2}(\beta))}{2}}.(-\frac{1}{\beta})\mathrm{d}\alpha\mathrm{d}\beta\]</span> <span class="math display">\[ =\frac{2}{\pi}.(-\int_0^1\mathrm{e}^{-log(\alpha)}.\mathrm{e}^{\frac{-(-log^{2}(\alpha))}{2}}.\frac{1}{\alpha}\mathrm{d}\alpha).(-\int_0^1\mathrm{e}^{-log(\beta)}.\mathrm{e}^{\frac{-(-log^{2}(\beta))}{2}}.\frac{1}{\beta}\mathrm{d}\beta)\]</span> <span class="math display">\[=\frac{2}{\pi}.\int_0^1\mathrm{e}^{-log(\alpha)}.\mathrm{e}^{\frac{-log^{2}(\alpha)}{2}}.\frac{1}{\alpha}\mathrm{d}\alpha\int_0^1\mathrm{e}^{-log(\beta)}.\mathrm{e}^{\frac{-log^{2}(\beta)}{2}}.\frac{1}{\beta}\mathrm{d}\beta\]</span> <span class="math display">\[=\frac{2}{\pi}.\int_0^1\mathrm{e}^{-log(\alpha).(1+\frac{1}{2}log(\alpha))}.\frac{1}{\alpha}\mathrm{d}\alpha.\int_0^1\mathrm{e}^{-log(\beta).(1+\frac{1}{2}log(\beta))}.\frac{1}{\beta}\mathrm{d}\beta\]</span> <span class="math display">\[=\frac{2}{\pi}.\int_0^1\mathrm{e}^{-log(\alpha).(1+\frac{1}{2}log(\alpha))}.\frac{1}{\alpha}.1\mathrm{d}\alpha.\int_0^1\mathrm{e}^{-log(\beta).(1+\frac{1}{2}log(\beta))}.\frac{1}{\beta}.1\mathrm{d}\beta\]</span> <span class="math display">\[=\frac{2}{\pi}.\int_0^1\mathrm{e}^{-log(\alpha).(1+\frac{1}{2}log(\alpha))}.\frac{1}{\alpha}.\frac{1}{1-0}\mathrm{d}\alpha.\int_0^1\mathrm{e}^{-log(\beta).(1+\frac{1}{2}log(\beta))}.\frac{1}{\beta}.\frac{1}{1-0}\mathrm{d}\beta\]</span></p>
+<p>Sendo:</p>
+<p><span class="math display">\[h_1(\alpha)=\mathrm{e}^{-log(\alpha).(1+\frac{1}{2}log(\alpha))}.\frac{1}{\alpha}.\frac{1}{1-0}\]</span> <span class="math display">\[g_1(\alpha)=\mathrm{e}^{-log(\alpha).(1+\frac{1}{2}log(\alpha))}.\frac{1}{\alpha}\]</span> <span class="math display">\[f_1(\alpha)=\frac{1}{1-0}\]</span> <span class="math display">\[h_2(\beta)=\mathrm{e}^{-log(\beta).(1+\frac{1}{2}log(\beta))}.\frac{1}{\beta}.\frac{1}{1-0}.\]</span> <span class="math display">\[g_2(\beta)=\mathrm{e}^{-log(\beta).(1+\frac{1}{2}log(\beta))}.\frac{1}{\beta}\]</span> <span class="math display">\[f_2(\beta)=\frac{1}{1-0}\]</span></p>
+<p>Onde:</p>
+<p><span class="math display">\[f_1(\alpha),f_2(\beta)\sim\mathcal{U}(1,0)\]</span></p>
+<p>e,</p>
+<p><span class="math display">\[f_1(\alpha),f_2(\beta)\geq0\]</span></p>
+<p>Estamos em condições de aplicar Monte Carlo:</p>
+<p><span class="math display">\[
+  \begin{cases}
+      \theta_1=\int_Dh_1(\alpha)\mathrm{d}\alpha=\int_Dg_1(\alpha).f_1(\alpha)\mathrm{d}\alpha=E(g_1(X))
+    \\\theta_2=\int_Dh_2(\beta)\mathrm{d}\beta=\int_Dg_2(\beta).f_2(\beta)\mathrm{d}\beta=E(g_2(Y))
+    \end{cases}
+  \]</span></p>
+<p>Se tivermos uma amostra aleatória <span class="math inline">\(x_1,...,x_n\)</span> da variavél aleatória <span class="math inline">\(X\)</span> com densidade <span class="math inline">\(f\)</span>, um estimador <span class="math inline">\(\theta\)</span> é:</p>
+<p><span class="math display">\[
+  \begin{cases}
+      \hat{\theta_1}=\sum\limits_{i=1}^n \frac{g_1(x_i)}{n}
+    \\\hat{\theta_2}=\sum\limits_{i=1}^n \frac{g_2(y_i)}{n}
+    \end{cases}
+  \]</span></p>
+<p>Finalmente:</p>
+<p><span class="math inline">\(\hat{E(e^{x+y})}=\hat{\theta}=\frac{2}{\pi}.\hat{\theta_1.}\hat{\theta_2}\)</span></p>
+<p>A variância de <span class="math inline">\(\hat\theta\)</span> será:</p>
+<p><span class="math inline">\(v=Var(\frac{2}{\pi}.\hat{\theta_1.}\hat{\theta_2})=\frac{4}{\pi^2}.Var(\hat{\theta_1}).Var(\hat{\theta_2})\)</span></p>
+<p>Aplicando o método de Monte Carlo, ficamos com:</p>
+<p><span class="math display">\[
+  \begin{cases}
+      \hat Var(\hat{\theta_1})=\frac{1}{n^2}\sum\limits_{i=1}^n (g_1(x_i)-\hat{\theta_1})^2
+    \\\hat Var(\hat{\theta_2})=\frac{1}{n^2}\sum\limits_{i=1}^n (g_2(y_i)-\hat{\theta_2})^2
+    \end{cases}
+  \]</span></p>
+<p>Substituindo na equação inicial:</p>
+<p><span class="math display">\[
+\hat v=\frac{4}{\pi^2}.\sum\limits_{i=1}^n \frac{(g_1(x_i)-\theta)^2}{n}.\sum\limits_{i=1}^n \frac{(g_2(y_i)-\theta)^2}{n}
+\]</span></p>
+</div>
+<div id="implementacao-do-metodo" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> Implementação do método:</h3>
+<div id="determinacao-do-estimador-e-do-estimador-da-variancia" class="section level4">
+<h4><span class="header-section-number">5.2.2.1</span> Determinação do estimador e do estimador da variância</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">1</span>)
+n&lt;-<span class="dv">1000</span>
+u1&lt;-<span class="kw">runif</span>(n)
+u2&lt;-<span class="kw">runif</span>(n)
+g1&lt;-<span class="cf">function</span>(x){<span class="kw">exp</span>(<span class="op">-</span><span class="kw">log</span>(x)<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)<span class="op">*</span><span class="kw">log</span>(x)))<span class="op">*</span>(<span class="dv">1</span><span class="op">/</span>x)}
+g2&lt;-<span class="cf">function</span>(y){<span class="kw">exp</span>(<span class="op">-</span><span class="kw">log</span>(y)<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)<span class="op">*</span><span class="kw">log</span>(y)))<span class="op">*</span>(<span class="dv">1</span><span class="op">/</span>y)}
+teta&lt;-(<span class="dv">2</span><span class="op">/</span>pi)<span class="op">*</span><span class="kw">mean</span>(<span class="kw">g1</span>(u1))<span class="op">*</span><span class="kw">mean</span>(<span class="kw">g2</span>(u2))
+teta1&lt;-<span class="kw">mean</span>(<span class="kw">g1</span>(u1))
+teta2&lt;-<span class="kw">mean</span>(<span class="kw">g2</span>(u2))
+
+v&lt;-(<span class="dv">4</span><span class="op">/</span>(pi<span class="op">^</span><span class="dv">2</span>))<span class="op">*</span>(<span class="kw">mean</span>((<span class="kw">g1</span>(u1)<span class="op">-</span>teta1)<span class="op">^</span><span class="dv">2</span>)<span class="op">/</span>n)<span class="op">*</span>(<span class="kw">mean</span>((<span class="kw">g2</span>(u2)<span class="op">-</span>teta2)<span class="op">^</span><span class="dv">2</span>)<span class="op">/</span>n)
+df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(
+  <span class="dt">probEstimated =</span> teta,
+  <span class="dt">varianceMC =</span> v
+)
+
+knitr<span class="op">::</span><span class="kw">kable</span>(df)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">probEstimated</th>
+<th align="right">varianceMC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">7.874321</td>
+<td align="right">8.3e-06</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="section-1" class="section level3">
+<h3><span class="header-section-number">5.2.3</span> 2.2</h3>
+<p>Dado que:</p>
+<p><span class="math display">\[
+X, Y \text{ random variables with p.d.f.:} \quad
+\]</span></p>
+<p><span class="math display">\[
+ f(x) = \frac{2}{sqrt(2\pi)}e^{-\frac{x^2}{2}} \quad , 0 &lt; x &lt; +\infty
+\]</span></p>
+<p>precisamos de estimar o par?metro <span class="math inline">\(\theta\)</span> com o método de Monte Carlo utilizando uma variável que não seja Uniforme, onde o parâmetro <span class="math inline">\(\theta\)</span> é definido como:</p>
+<p><span class="math display">\[
+\theta = E(e^{X+Y})
+\]</span></p>
+</div>
+<div id="trabalhar-o-estimador" class="section level3">
+<h3><span class="header-section-number">5.2.4</span> Trabalhar o estimador</h3>
+<p><span class="math display">\[
+\theta = E(e^{X+Y}) \quad = E(e^X \times e^Y) \quad = E(e^X) \times E(e^Y) 
+\]</span></p>
+<p><span class="math display">\[
+= \int_{0}^{+\infty} e^x \frac{2}{\sqrt{2\pi}} e^{-\frac{x^2}{2}} dx \times \int_{0}^{+\infty} e^y \frac{2}{\sqrt{2\pi}} e^{-\frac{y^2}{2}} dy
+\]</span></p>
+<p>Este integral n?o as condições para o método de Monte Carlo ser aplicado, e portanto é necessário trabalhar o integral de maneira a que seja possível aplicar o método.</p>
+</div>
+<div id="mudanca-de-variavel-1" class="section level3">
+<h3><span class="header-section-number">5.2.5</span> Mudança de variável</h3>
+<p>Ao aplicar a seguinte mudança de variável:</p>
+<p><span class="math display">\[
+x = \varphi(t) = \sqrt{t}
+\]</span></p>
+<p><span class="math display">\[
+t = \varphi^{-1}(x) = x^2
+\]</span></p>
+<p><span class="math display">\[
+\varphi&#39;(t) = (\sqrt{t})&#39; = (t^\frac{1}{2})&#39; = \frac{1}{2}t^{-\frac{1}{2}}
+\]</span></p>
+<p><span class="math display">\[
+\lim_{t \to +\infty} \sqrt{t} = +\infty
+\]</span></p>
+<p><span class="math display">\[
+\lim_{t \to 0} \sqrt{t} = 0
+\]</span></p>
+<p>podemos reorganizar o integral da seguinte maneira:</p>
+<p><span class="math display">\[
+x = \varphi(t) = t_x \quad, y = \varphi(t) = t_y
+\]</span></p>
+<p><span class="math display">\[
+\int_{0}^{+\infty} e^{\sqrt{t_x}} \frac{2}{\sqrt{2\pi}} e^{-\frac{1}{2}t_x} \frac{1}{2}t_x^{-\frac{1}{2}} dt_x \times \int_{0}^{+\infty} e^{\sqrt{t_y}} \frac{2}{\sqrt{2\pi}} e^{-\frac{1}{2}t_y} \frac{1}{2}t_y^{-\frac{1}{2}} dt_y
+\]</span></p>
+<p>Re-ordenando a equação, estamos agora em condições de aplicar o método de Monte Carlo uma vez que o integral é definido pela multiplicação de:</p>
+<ol style="list-style-type: decimal">
+<li>uma p.d.f. <span class="math inline">\(f(x)\)</span> conhecida</li>
+<li>uma outra função <span class="math inline">\(g(x)\)</span></li>
+</ol>
+<p><span class="math display">\[
+\int_{0}^{+\infty} e^{\sqrt{t_x}} \frac{2}{\sqrt{2\pi}}  t_x^{-\frac{1}{2}} \frac{1}{2}e^{-\frac{1}{2}t_x}  dt_x \times \int_{0}^{+\infty} e^{\sqrt{t_y}} \frac{2}{\sqrt{2\pi}}  t_y^{-\frac{1}{2}} \frac{1}{2} e^{-\frac{1}{2}t_y}  dt_y
+\]</span></p>
+<p>onde:</p>
+<p><span class="math display">\[
+g(x) = e^{\sqrt{x}} \frac{2}{\sqrt{2\pi}}  x^{-\frac{1}{2}} \quad \text{and} \quad f(x) = \frac{1}{2} e^{-\frac{1}{2}x}
+\]</span></p>
+<p>onde <span class="math inline">\(f(x)\)</span> é a função distribuição densidade de uma variável Exponencial com <span class="math inline">\(\lambda = \frac{1}{2}\)</span>:</p>
+<p><span class="math display">\[
+X \sim  Exp( \frac{1}{2}) 
+\]</span></p>
+<p>Portanto, é agora necessário gerar amostras aleatórias de <span class="math inline">\(X \sim Exp(\frac{1}{2})\)</span></p>
+</div>
+<div id="gerar-uma-variavel-com-distribuicao-exponencial-utilizando-o-metodo-da-transformacao-inversa" class="section level3">
+<h3><span class="header-section-number">5.2.6</span> Gerar uma variável com distribuição Exponencial utilizando o método da Transformação Inversa</h3>
+<p>Comecemos com a função distribui??o cumulativa de uma variável Exponencial, que é definida por: <span class="math display">\[
+F(X) = 1 - e^{-\lambda x}, \quad x \in \mathbb{R}
+\]</span></p>
+<p>Tendo em consideração que o resultado de <span class="math inline">\(F(X)\)</span> é um número real entre 0 e 1, e que:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(F(X)\)</span> ? uma função monótona não decrescente</li>
+<li><span class="math inline">\(F(X)\)</span> ? uma função cont?nua</li>
+</ol>
+<p>? sabido que <span class="math inline">\(F(X)\)</span> ? invert?vel.</p>
+</div>
+<div id="implementacao-do-metodo-1" class="section level3">
+<h3><span class="header-section-number">5.2.7</span> Implementação do método</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">1</span>)
+lambda &lt;-<span class="st"> </span><span class="fl">0.5</span>
+N &lt;-<span class="st"> </span><span class="dv">1000</span>
+samples &lt;-<span class="st"> </span><span class="kw">runif</span>(N)
+
+
+inverseExp &lt;-<span class="st"> </span><span class="cf">function</span>(u, lambda){
+  <span class="op">-</span>(<span class="dv">1</span><span class="op">/</span>lambda)<span class="op">*</span><span class="kw">log</span>(<span class="dv">1</span><span class="op">-</span>u)
+}
+
+values &lt;-<span class="st"> </span><span class="kw">inverseExp</span>(samples, lambda)
+
+<span class="kw">hist</span>(values, <span class="dt">breaks=</span><span class="dv">100</span>, <span class="dt">freq =</span> F)
+<span class="kw">lines</span>(<span class="kw">density</span>(<span class="kw">rexp</span>(<span class="dv">1000</span>,<span class="fl">0.5</span>)))</code></pre></div>
+<p><img src="Computational_Stats_Winter_2018_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">g &lt;-<span class="st"> </span><span class="cf">function</span>(x){
+  <span class="kw">exp</span>(<span class="kw">sqrt</span>(x))<span class="op">*</span>(<span class="dv">2</span><span class="op">/</span>(<span class="kw">sqrt</span>(<span class="dv">2</span><span class="op">*</span>pi)))<span class="op">*</span>x<span class="op">^</span>(<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)
+}
+
+X &lt;-<span class="st"> </span><span class="kw">runif</span>(N)
+Y &lt;-<span class="st"> </span><span class="kw">runif</span>(N)
+
+EX &lt;-<span class="st"> </span><span class="kw">mean</span>(<span class="kw">g</span>(<span class="kw">inverseExp</span>(X, lambda)))
+EY &lt;-<span class="st"> </span><span class="kw">mean</span>(<span class="kw">g</span>(<span class="kw">inverseExp</span>(Y, lambda)))
+
+theta2 &lt;-<span class="st"> </span>EX<span class="op">*</span>EY
+
+vEX &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>(N<span class="op">^</span><span class="dv">2</span>))<span class="op">*</span><span class="kw">sum</span>((<span class="kw">g</span>(<span class="kw">inverseExp</span>(X, lambda))<span class="op">-</span>EX)<span class="op">^</span><span class="dv">2</span>)
+vEY &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>(N<span class="op">^</span><span class="dv">2</span>))<span class="op">*</span><span class="kw">sum</span>((<span class="kw">g</span>(<span class="kw">inverseExp</span>(Y, lambda))<span class="op">-</span>EY)<span class="op">^</span><span class="dv">2</span>)
+
+vtheta &lt;-vEX<span class="op">*</span>vEY
+
+df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(
+  <span class="dt">probEstimated =</span> theta2,
+  <span class="dt">varianceMC =</span> vtheta
+)
+
+knitr<span class="op">::</span><span class="kw">kable</span>(df)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">probEstimated</th>
+<th align="right">varianceMC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">7.901322</td>
+<td align="right">2.4e-06</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="section-2" class="section level3">
+<h3><span class="header-section-number">5.2.8</span> 2.3</h3>
+<p><span class="math inline">\(\hat{\theta}\)</span> = <span class="math inline">\(E(e^{x+y})\)</span> <span class="math inline">\(var(\hat{\theta})= \frac{4}{\pi^2}.\sum\limits_{i=1}^n \frac{(g_1(x_i)-\hat{\theta})^2}{n}.\sum\limits_{i=1}^n \frac{(g_2(y_i)-\hat{\theta})^2}{n}\)</span></p>
+<p>novo estimador:</p>
+<p><span class="math inline">\(\hat{\theta_c}\quad=\quad \hat{\theta}-\beta.(c-\mu)\)</span></p>
+<p><span class="math inline">\(E(C)\quad=\quad\mu\)</span> <span class="math inline">\(var(\hat{\theta_c}) = var(\hat{\theta})+\beta^2.var(C)-2\beta cov(\hat{\theta},C)\)</span></p>
+<p>Queremos minimazar a variância, minimizando a variável <span class="math inline">\(\beta\)</span>: para tal derivamos <span class="math inline">\(var(\hat{\theta_c})\)</span> em ordem a <span class="math inline">\(\beta\)</span> o que resulta na expressão: <span class="math inline">\(var(\hat{\theta_c})&#39;=2\beta var(C) - 2cov(\hat{\theta},C)\)</span></p>
+<p>Com <span class="math inline">\(var(\hat{\theta_c})&#39;=0\)</span> iremos obter os extremos. <span class="math inline">\(\beta=\frac{-2cov(\hat{\theta},C)}{2var(C)}\)</span></p>
+<p>Calculo auxiliares: <span class="math display">\[
+b)\quad \quad \quad var(\hat{\theta})=Var\left(\frac{2}{\pi}.(\hat{\theta_1}.\hat{\theta_2})\right)=\frac{4}{\pi^2}.Var(\hat{\theta_1}).Var(\hat{\theta_2}) 
+\]</span></p>
+<p><span class="math display">\[
+E(C)=E\left(\frac{1}{n}.\sum_{i=0}^n u_i\:v_i \right)= \frac{1}{n}\sum (E(u).E(v))=E(u).E(v) =\int_0^1 u \: du.\int_0^1 v \:dv
+\]</span> <span class="math display">\[
+var(C)= \frac{1}{n}.\left(\int_0^1f_c(x)^2-E(C)^2)\right)
+\]</span></p>
+<p><span class="math display">\[
+Cov(\hat{\theta},C)= cov \left(\frac{1}{n}\sum_{i=1}^n g(U_i,V_i),\frac{1}{n}\sum_{i=1}^n U_i,V_i \right)= 
+\]</span> <span class="math display">\[
+= \frac{1}{n^2}\sum_{i=1}^n cov \left( g(U_i,V_i), U_i,V_i \right) -\sum_{i=1}^n\sum_{j=1}^ncov \left( g(U_i,V_i), U_jV_j \right)=
+\]</span> Como os indices <span class="math inline">\(i \neq j\)</span> então<span class="math inline">\(g(U_i,V_i)\)</span> será independente de <span class="math inline">\(U_i V_i\)</span> e a sua covariância será Zero.</p>
+<p><span class="math display">\[
+= \frac{1}{n^2}\sum_{i=1}^n cov \left( g(U_i,V_i), U_i,V_i \right)-0=
+\]</span> <span class="math display">\[
+=\frac{1}{n}(E(g(U,V))UV))-\frac{\theta}{4n}
+\]</span></p>
+<p><span class="math display">\[
+E(g(U,V))UV)= \int_0^{1}\int_0^{1}uv.g(u,v)\:du\:dv 
+\]</span> que será estimado em r pelo método de monte carlo</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">kk=<span class="dv">1</span>
+res_final &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">integer</span>(), <span class="kw">double</span>(), <span class="kw">double</span>(), <span class="kw">double</span>(), <span class="kw">double</span>())
+n &lt;-<span class="st"> </span><span class="dv">10</span>
+
+<span class="cf">while</span>(kk<span class="op">&lt;</span><span class="dv">6</span>) {
+    <span class="cf">if</span>(kk<span class="op">!=</span><span class="dv">1</span>) {
+      <span class="cf">if</span>(kk<span class="op">%%</span><span class="dv">2</span><span class="op">!=</span><span class="dv">0</span>)
+        n&lt;-n<span class="op">*</span><span class="dv">2</span>
+      <span class="cf">else</span>
+        n&lt;-n<span class="op">*</span><span class="dv">5</span>
+    }
+    <span class="kw">set.seed</span>(<span class="dv">1</span>)
+    u1&lt;-<span class="kw">runif</span>(n)
+    u2&lt;-<span class="kw">runif</span>(n)
+    g1&lt;-<span class="cf">function</span>(x){<span class="kw">exp</span>(<span class="op">-</span><span class="kw">log</span>(x)<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)<span class="op">*</span><span class="kw">log</span>(x)))<span class="op">*</span>(<span class="dv">1</span><span class="op">/</span>x)}
+    g2&lt;-<span class="cf">function</span>(y){<span class="kw">exp</span>(<span class="op">-</span><span class="kw">log</span>(y)<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)<span class="op">*</span><span class="kw">log</span>(y)))<span class="op">*</span>(<span class="dv">1</span><span class="op">/</span>y)}
+    teta1&lt;-<span class="kw">mean</span>(<span class="kw">g1</span>(u1))
+    teta2&lt;-<span class="kw">mean</span>(<span class="kw">g2</span>(u2))
+    teta&lt;-(<span class="dv">2</span><span class="op">/</span>pi)<span class="op">*</span><span class="kw">mean</span>(<span class="kw">g1</span>(u1))<span class="op">*</span><span class="kw">mean</span>(<span class="kw">g2</span>(u2))
+    teta_var&lt;-(<span class="dv">4</span><span class="op">/</span>(pi<span class="op">^</span><span class="dv">2</span>))<span class="op">*</span>((<span class="kw">mean</span>((<span class="kw">g1</span>(u1)<span class="op">-</span>teta1)<span class="op">^</span><span class="dv">2</span>))<span class="op">/</span>n)<span class="op">*</span>((<span class="kw">mean</span>((<span class="kw">g2</span>(u2)<span class="op">-</span>teta2)<span class="op">^</span><span class="dv">2</span>))<span class="op">/</span>n)
+    df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(
+      <span class="dt">probEstimated =</span> teta,
+      <span class="dt">varianceMC =</span> teta_var
+    )
+    
+    g1_b&lt;-<span class="cf">function</span>(x){<span class="kw">exp</span>(<span class="op">-</span><span class="kw">log</span>(x)<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)<span class="op">*</span><span class="kw">log</span>(x)))}
+    g2_b&lt;-<span class="cf">function</span>(y){<span class="kw">exp</span>(<span class="op">-</span><span class="kw">log</span>(y)<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)<span class="op">*</span><span class="kw">log</span>(y)))}
+    covar_tc&lt;-((<span class="dv">1</span><span class="op">/</span>n<span class="op">^</span><span class="dv">2</span>)<span class="op">*</span><span class="kw">mean</span>(<span class="kw">g1_b</span>(u1)<span class="op">*</span><span class="kw">g2_b</span>(u2)<span class="op">*</span>u1<span class="op">*</span>u2))<span class="op">-</span>teta<span class="op">/</span>(<span class="dv">4</span><span class="op">*</span>n<span class="op">^</span><span class="dv">2</span>)
+    
+    c_var&lt;-(<span class="dv">7</span><span class="op">/</span>(n<span class="op">*</span><span class="dv">144</span>))
+    beta&lt;-covar_tc<span class="op">/</span>(c_var)
+    tetac&lt;-(teta  <span class="op">-</span><span class="st">   </span>(beta<span class="op">*</span>((<span class="dv">1</span><span class="op">/</span><span class="dv">4</span>)  <span class="op">-</span><span class="st">   </span><span class="kw">mean</span>(u1<span class="op">*</span>u2))))
+    tetac_var&lt;-(teta_var<span class="op">+</span>(beta<span class="op">^</span><span class="dv">2</span>)<span class="op">*</span>c_var<span class="op">-</span><span class="dv">2</span><span class="op">*</span>beta<span class="op">*</span>covar_tc)
+    
+    res&lt;-<span class="kw">data.frame</span>(n, teta, teta_var, tetac, tetac_var)
+    res_final&lt;-<span class="kw">rbind</span>(res_final,res)
+    kk&lt;-kk<span class="op">+</span><span class="dv">1</span>
+}
+knitr<span class="op">::</span><span class="kw">kable</span>(res_final)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">n</th>
+<th align="right">teta</th>
+<th align="right">teta_var</th>
+<th align="right">tetac</th>
+<th align="right">tetac_var</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">10</td>
+<td align="right">7.114578</td>
+<td align="right">0.0728507</td>
+<td align="right">6.962646</td>
+<td align="right">0.0401382</td>
+</tr>
+<tr class="even">
+<td align="right">50</td>
+<td align="right">7.444414</td>
+<td align="right">0.0024827</td>
+<td align="right">7.432106</td>
+<td align="right">0.0021721</td>
+</tr>
+<tr class="odd">
+<td align="right">100</td>
+<td align="right">7.604431</td>
+<td align="right">0.0006777</td>
+<td align="right">7.598763</td>
+<td align="right">0.0006353</td>
+</tr>
+<tr class="even">
+<td align="right">500</td>
+<td align="right">7.839631</td>
+<td align="right">0.0000307</td>
+<td align="right">7.839400</td>
+<td align="right">0.0000303</td>
+</tr>
+<tr class="odd">
+<td align="right">1000</td>
+<td align="right">7.874321</td>
+<td align="right">0.0000083</td>
+<td align="right">7.874559</td>
+<td align="right">0.0000083</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="deliverables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="problem-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
