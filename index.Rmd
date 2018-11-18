@@ -21,12 +21,22 @@ fig_basePath = "Figures/"
 ```{r child="Content/lesson3.Rmd"}
 ```
 
-# Deliverables
-```{r child="Works/Deliverable1.Rmd"}
+# Deliverable 1
+```{r echo=F}
+env <- new.env()
+env$GLOBAL.Section = "#"
+out <- knitr::knit_child("Works/Deliverable1.Rmd",envir = env)
 ```
+`r paste(out, collapse='\n')`
 
-```{r child="Works/work2/Deliverable2.Rmd"}
+# Deliverable 2
+
+```{r echo=F}
+env <- new.env()
+env$GLOBAL.Section = "#"
+out <- knitr::knit_child("Works/work2/Deliverable2.Rmd",envir = env)
 ```
+`r paste(out, collapse='\n')`
 
 <!--chapter:end:index.Rmd-->
 

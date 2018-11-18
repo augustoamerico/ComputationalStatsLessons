@@ -9,7 +9,7 @@ site: bookdown::bookdown_site
 output: pdf_document
 ---
 
-```{r include = F}
+```{r include = F, warning=FALSE}
 library(tinytex)
 library(ggplot2)
 library(plotly)
@@ -24,6 +24,9 @@ LatexOrOther <- function(latex, other){
 PROJHOME <- "/Users/tiago.correia/courses/MestradoBigData/EstatisticaNumericaComputacional"
 this.path = file.path(PROJHOME,"Works","work2")
 
+if(!exists("GLOBAL.Section")){
+  GLOBAL.Section <- ""
+}
 
 confidence_interval_plot <- function(sample, ci.left, ci.right){
   sample.df <- data.frame(
@@ -65,26 +68,29 @@ return(LatexOrOther(p,pp))
 }
 ```
 
-# Problem 1
+`r GLOBAL.Section`# Problem 1
 
 Consider the following sample:
 ```{r eval=F}
 c(7.0,3.5,11.9,8.9,10.1,1.2,1.1,7.9,12.9,1.3,5.2,5.1,3.9,2.5,10.4,6.2,-3.9)
 ```
 
-## Normal variance MLE {#sub:normal-mle-var}
+`r GLOBAL.Section`## Normal variance MLE {#sub:normal-mle-var}
 Assume that the given sample originated from a random variable with a normal distribution whose parameter $\sigma^2$ is unknown. Use the sample to determine the maximum-likelihood estimator of the parameter $\sigma^2$.
 
 _____
 
 Maximum normal distribution Likelihood estimation.
 
-Assuming that our sample follows a normal distribution as said on the exercise question, we can say that the probability density function follows this format
+Assuming that our sample follows a normal distribution as said on the exercise question, we can say that the probability density function is as following:
 $$
 f_X(x_j)=(2. \pi. \sigma_0^2).e^{-\frac{1}{2}.\frac{(xj-\mu)^2}{\sigma_0^2}}
 $$
 
-And to optain the maximum likelihood estimation, we need to partially derivate the likelihood in order to the two parameters, $\mu$ and $\sigma^2$, and discover the zeros.
+Now, we need to obtain the point with max value of this function, which will be our estimated value. And to obtain the maximum likelihood estimation, we need to partially derivate the likelihood function in order to the two parameters of the normal distribution, $\mu$ and $\sigma^2$, and:
+
+1. Obtain the zeros
+2. Check if those zeros are indeed a maximum
 
 $$
 L(\mu,\sigma^2,x_1,...,x_n)=\prod_{j=1}^n f_X(x_j;\mu,\sigma^2)
@@ -145,7 +151,7 @@ norm.maximLikelihoodEst.var(sample)
 
 ```
 
-## Jackknife bias and variance
+`r GLOBAL.Section`## Jackknife bias and variance
 
 Determine the Jackknife bias and variance of the estimator obtained in the item (a), and discuss the quality of the estimator.
 
@@ -235,7 +241,7 @@ variance.jackknife2 <- ((n-1)/n)*sum(sapply(1:n,function(idx,sample){
 ```
 
 
-## Kolmogorov-Smirnov Test
+`r GLOBAL.Section`## Kolmogorov-Smirnov Test
 
 Consider the null hypothesis $H_0$: The sample was generated from a random variable with a normal distribution with parameters   $(\mu, \sigma^2)$ = $(5,5)$. Use the test statistic's empirical distribution function  to estimate the Kolmogorov-Smirnov test statistic's p-value. Explain why the test statistic is adequate considering the type of null hypothesis we are trying to test.
 
@@ -345,9 +351,9 @@ pValue
 ```
 
 
-# Problem 2
+`r GLOBAL.Section`# Problem 2
 
-## Exponential parameter MLE
+`r GLOBAL.Section`## Exponential parameter MLE
 
 Assume that the given sample originated from a random variable with a exponential distribution whose parameter $\lambda$ is unknown. Use the sample to determine the maximum-likelihood estimator of the parameter $\lambda$ 
 
@@ -393,7 +399,7 @@ exp.maximLikelihoodEst.lambda.estimated
 
 ```
 
-## Bootstrap bias and variance
+`r GLOBAL.Section`## Bootstrap bias and variance
 
 Determine the Bootstrap bias and variance of the estimator obtained in the item (a). 
 
@@ -435,7 +441,7 @@ variance.bootstrap
 ```
 
 
-## Bootstrap confidence interval
+`r GLOBAL.Section`## Bootstrap confidence interval
 
 Construct a basic Bootstrap confidence interval for $\lambda$
 
@@ -503,7 +509,7 @@ cat(sprintf("left value: %f\nright value: %f",boot_cis$ci_left,boot_cis$ci_right
 confidence_interval_plot(boot_cis$sample.bootstraps.phi, boot_cis$ci_left, boot_cis$ci_right)
 ```
 
-## Studentized-Bootstrap confidence interval
+`r GLOBAL.Section`## Studentized-Bootstrap confidence interval
 
 Construct a Studentized-Bootstrap confidence interval for $\lambda$ (Use the Bootstrap variance estimator to estimate the Bootstrap samples's variance).
 
@@ -615,7 +621,7 @@ cat(sprintf("left value: %f\nright value: %f",studentized.ci.values$ci_left,stud
 confidence_interval_plot(sample.bootstraps.phi, studentized.ci.values$ci_left, studentized.ci.values$ci_right)
 ```
 
-## Discussion
+`r GLOBAL.Section`## Discussion
 
 Discuss the results of items (c) and (d). Choose $\alpha = 0.025$ as the significance level for the confidence intervals.
 
